@@ -39,7 +39,6 @@
             this.Btn_Perfil = new FontAwesome.Sharp.IconButton();
             this.Btn_LogOut = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblCif = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -164,7 +163,7 @@
             this.Btn_TrabajosPer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.Btn_TrabajosPer.Size = new System.Drawing.Size(200, 55);
             this.Btn_TrabajosPer.TabIndex = 3;
-            this.Btn_TrabajosPer.Text = "Consultar Citas";
+            this.Btn_TrabajosPer.Text = "Historial Citas";
             this.Btn_TrabajosPer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_TrabajosPer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_TrabajosPer.UseVisualStyleBackColor = true;
@@ -240,7 +239,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(126)))), ((int)(((byte)(133)))));
-            this.panel3.Controls.Add(this.lblCif);
             this.panel3.Controls.Add(this.lblCorreo);
             this.panel3.Controls.Add(this.lblNombre);
             this.panel3.Controls.Add(this.label3);
@@ -250,17 +248,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 81);
             this.panel3.TabIndex = 0;
-            // 
-            // lblCif
-            // 
-            this.lblCif.AutoSize = true;
-            this.lblCif.Font = new System.Drawing.Font("Century", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCif.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblCif.Location = new System.Drawing.Point(47, 56);
-            this.lblCif.Name = "lblCif";
-            this.lblCif.Size = new System.Drawing.Size(22, 15);
-            this.lblCif.TabIndex = 7;
-            this.lblCif.Text = "Cif";
             // 
             // lblCorreo
             // 
@@ -291,9 +278,9 @@
             this.label3.ForeColor = System.Drawing.Color.Gainsboro;
             this.label3.Location = new System.Drawing.Point(47, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 15);
+            this.label3.Size = new System.Drawing.Size(51, 15);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Estudiante";
+            this.label3.Text = "Paciente";
             // 
             // iconPictureBox1
             // 
@@ -364,7 +351,6 @@
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Panel pnl_Content;
-        private System.Windows.Forms.Label lblCif;
         private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

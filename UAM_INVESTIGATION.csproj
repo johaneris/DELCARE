@@ -113,7 +113,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Estructuras\StrTrabajos.cs" />
+    <Compile Include="Estructuras\StrHorarios.cs" />
     <Compile Include="Estructuras\StrUsuarioAdmin.cs" />
     <Compile Include="Estructuras\StrUsuarioEst.cs" />
     <Compile Include="FormAdmin\EditarPerfil.cs">
@@ -157,6 +157,12 @@
     </Compile>
     <Compile Include="FormEstudiantes\AgendarCitas.Designer.cs">
       <DependentUpon>AgendarCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEstudiantes\ConsultarHorarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormEstudiantes\ConsultarHorarios.Designer.cs">
+      <DependentUpon>ConsultarHorarios.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEstudiantes\EditarPerfilEst.cs">
       <SubType>UserControl</SubType>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEstudiantes\AgendarCitas.resx">
       <DependentUpon>AgendarCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEstudiantes\ConsultarHorarios.resx">
+      <DependentUpon>ConsultarHorarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEstudiantes\EditarPerfilEst.resx">
       <DependentUpon>EditarPerfilEst.cs</DependentUpon>
