@@ -158,6 +158,18 @@
     <Compile Include="FornPaciente\AgendarCitas.Designer.cs">
       <DependentUpon>AgendarCitas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FornPaciente\ConsultarCitas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FornPaciente\ConsultarCitas.Designer.cs">
+      <DependentUpon>ConsultarCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FornPaciente\ConsultarHorarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FornPaciente\ConsultarHorarios.Designer.cs">
+      <DependentUpon>ConsultarHorarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FornPaciente\EditarPerfilEst.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -206,7 +218,6 @@
     <Compile Include="FormsInicios\RegistroUserEst.Designer.cs">
       <DependentUpon>RegistroUserEst.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\ControlTrabajos.cs" />
     <Compile Include="Helpers\InitRegis.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -230,6 +241,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FornPaciente\AgendarCitas.resx">
       <DependentUpon>AgendarCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FornPaciente\ConsultarCitas.resx">
+      <DependentUpon>ConsultarCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FornPaciente\ConsultarHorarios.resx">
+      <DependentUpon>ConsultarHorarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FornPaciente\EditarPerfilEst.resx">
       <DependentUpon>EditarPerfilEst.cs</DependentUpon>

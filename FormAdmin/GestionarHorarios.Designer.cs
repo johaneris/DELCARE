@@ -35,15 +35,16 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.lblErrorMessage = new System.Windows.Forms.Label();
             this.btn_Guardar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txt_Doctor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Btn_Salir = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,17 +52,17 @@
             this.horaInicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horaFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diaSemana = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Btn_Salir = new FontAwesome.Sharp.IconButton();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.cmb_Doctores = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(126)))), ((int)(((byte)(133)))));
+            this.panel2.Controls.Add(this.cmb_Doctores);
             this.panel2.Controls.Add(this.dateTimePicker2);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.comboBox1);
@@ -72,7 +73,6 @@
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.txt_Doctor);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(567, 0);
@@ -103,16 +103,26 @@
             this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboBox1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Lunes",
-            "Martes",
-            "Miercoles",
-            "Jueves",
-            "Viernes"});
             this.comboBox1.Location = new System.Drawing.Point(40, 253);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(270, 28);
             this.comboBox1.TabIndex = 46;
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.Red;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.Red;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 26;
+            this.iconPictureBox2.Location = new System.Drawing.Point(67, 341);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(29, 26);
+            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconPictureBox2.TabIndex = 45;
+            this.iconPictureBox2.TabStop = false;
+            this.iconPictureBox2.Visible = false;
             // 
             // lblErrorMessage
             // 
@@ -195,17 +205,6 @@
             this.label9.TabIndex = 37;
             this.label9.Text = "Hora Inicial";
             // 
-            // txt_Doctor
-            // 
-            this.txt_Doctor.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_Doctor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Doctor.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Doctor.ForeColor = System.Drawing.Color.Black;
-            this.txt_Doctor.Location = new System.Drawing.Point(40, 79);
-            this.txt_Doctor.Name = "txt_Doctor";
-            this.txt_Doctor.Size = new System.Drawing.Size(270, 20);
-            this.txt_Doctor.TabIndex = 28;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -229,6 +228,24 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(567, 427);
             this.panel3.TabIndex = 2;
+            // 
+            // Btn_Salir
+            // 
+            this.Btn_Salir.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_Salir.FlatAppearance.BorderSize = 0;
+            this.Btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Salir.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.Btn_Salir.IconColor = System.Drawing.Color.Black;
+            this.Btn_Salir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Btn_Salir.IconSize = 15;
+            this.Btn_Salir.Location = new System.Drawing.Point(3, 3);
+            this.Btn_Salir.Name = "Btn_Salir";
+            this.Btn_Salir.Size = new System.Drawing.Size(15, 15);
+            this.Btn_Salir.TabIndex = 30;
+            this.Btn_Salir.TabStop = false;
+            this.Btn_Salir.UseVisualStyleBackColor = false;
+            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
             // label7
             // 
@@ -318,39 +335,17 @@
             this.diaSemana.Name = "diaSemana";
             this.diaSemana.Width = 115;
             // 
-            // Btn_Salir
+            // cmb_Doctores
             // 
-            this.Btn_Salir.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Salir.FlatAppearance.BorderSize = 0;
-            this.Btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Salir.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.Btn_Salir.IconColor = System.Drawing.Color.Black;
-            this.Btn_Salir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Btn_Salir.IconSize = 15;
-            this.Btn_Salir.Location = new System.Drawing.Point(3, 3);
-            this.Btn_Salir.Name = "Btn_Salir";
-            this.Btn_Salir.Size = new System.Drawing.Size(15, 15);
-            this.Btn_Salir.TabIndex = 30;
-            this.Btn_Salir.TabStop = false;
-            this.Btn_Salir.UseVisualStyleBackColor = false;
-            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.Red;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.Red;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 26;
-            this.iconPictureBox2.Location = new System.Drawing.Point(67, 341);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(29, 26);
-            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconPictureBox2.TabIndex = 45;
-            this.iconPictureBox2.TabStop = false;
-            this.iconPictureBox2.Visible = false;
+            this.cmb_Doctores.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmb_Doctores.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Doctores.FormattingEnabled = true;
+            this.cmb_Doctores.Items.AddRange(new object[] {
+            ""});
+            this.cmb_Doctores.Location = new System.Drawing.Point(40, 80);
+            this.cmb_Doctores.Name = "cmb_Doctores";
+            this.cmb_Doctores.Size = new System.Drawing.Size(270, 28);
+            this.cmb_Doctores.TabIndex = 49;
             // 
             // GestionarHorarios
             // 
@@ -362,10 +357,10 @@
             this.Size = new System.Drawing.Size(949, 427);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -387,11 +382,11 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_Doctor;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox1;
         private FontAwesome.Sharp.IconButton Btn_Salir;
+        private System.Windows.Forms.ComboBox cmb_Doctores;
     }
 }
