@@ -34,7 +34,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_Celular = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_Especialidad = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
@@ -46,6 +45,7 @@
             this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Btn_Salir = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +54,7 @@
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Btn_Salir = new FontAwesome.Sharp.IconButton();
+            this.cmb_Especilidad = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -64,9 +64,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(126)))), ((int)(((byte)(133)))));
+            this.panel2.Controls.Add(this.cmb_Especilidad);
             this.panel2.Controls.Add(this.txt_Celular);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.txt_Especialidad);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.iconPictureBox2);
@@ -105,17 +105,6 @@
             this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 50;
             this.label2.Text = "Celular";
-            // 
-            // txt_Especialidad
-            // 
-            this.txt_Especialidad.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_Especialidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Especialidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Especialidad.ForeColor = System.Drawing.Color.Black;
-            this.txt_Especialidad.Location = new System.Drawing.Point(58, 155);
-            this.txt_Especialidad.Name = "txt_Especialidad";
-            this.txt_Especialidad.Size = new System.Drawing.Size(270, 20);
-            this.txt_Especialidad.TabIndex = 47;
             // 
             // button1
             // 
@@ -264,6 +253,24 @@
             this.panel3.Size = new System.Drawing.Size(562, 427);
             this.panel3.TabIndex = 3;
             // 
+            // Btn_Salir
+            // 
+            this.Btn_Salir.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_Salir.FlatAppearance.BorderSize = 0;
+            this.Btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Salir.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.Btn_Salir.IconColor = System.Drawing.Color.Black;
+            this.Btn_Salir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Btn_Salir.IconSize = 15;
+            this.Btn_Salir.Location = new System.Drawing.Point(3, 3);
+            this.Btn_Salir.Name = "Btn_Salir";
+            this.Btn_Salir.Size = new System.Drawing.Size(15, 15);
+            this.Btn_Salir.TabIndex = 31;
+            this.Btn_Salir.TabStop = false;
+            this.Btn_Salir.UseVisualStyleBackColor = false;
+            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -358,23 +365,20 @@
             this.Estado.Name = "Estado";
             this.Estado.Width = 50;
             // 
-            // Btn_Salir
+            // cmb_Especilidad
             // 
-            this.Btn_Salir.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Salir.FlatAppearance.BorderSize = 0;
-            this.Btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Salir.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.Btn_Salir.IconColor = System.Drawing.Color.Black;
-            this.Btn_Salir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Btn_Salir.IconSize = 15;
-            this.Btn_Salir.Location = new System.Drawing.Point(3, 3);
-            this.Btn_Salir.Name = "Btn_Salir";
-            this.Btn_Salir.Size = new System.Drawing.Size(15, 15);
-            this.Btn_Salir.TabIndex = 31;
-            this.Btn_Salir.TabStop = false;
-            this.Btn_Salir.UseVisualStyleBackColor = false;
-            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
+            this.cmb_Especilidad.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmb_Especilidad.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Especilidad.FormattingEnabled = true;
+            this.cmb_Especilidad.Items.AddRange(new object[] {
+            "Dentista General",
+            "Endodoncista",
+            "Ortodoncia",
+            "Cirugía Maxilofacial"});
+            this.cmb_Especilidad.Location = new System.Drawing.Point(58, 159);
+            this.cmb_Especilidad.Name = "cmb_Especilidad";
+            this.cmb_Especilidad.Size = new System.Drawing.Size(270, 28);
+            this.cmb_Especilidad.TabIndex = 51;
             // 
             // MonitorearDoctores
             // 
@@ -405,7 +409,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Celular;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_Especialidad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
@@ -419,5 +422,6 @@
         private System.Windows.Forms.TextBox txt_Celular;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton Btn_Salir;
+        private System.Windows.Forms.ComboBox cmb_Especilidad;
     }
 }

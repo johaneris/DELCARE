@@ -156,7 +156,7 @@
             this.diaSemana});
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.Gainsboro;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 105);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 105);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -203,7 +203,7 @@
             // 
             // diaSemana
             // 
-            this.diaSemana.HeaderText = "Días Semanales";
+            this.diaSemana.HeaderText = "Día de Semana";
             this.diaSemana.Name = "diaSemana";
             this.diaSemana.Width = 115;
             // 
