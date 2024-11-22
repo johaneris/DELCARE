@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UAM_INVESTIGATION.Estructuras
 {
-    public struct Horarios
+    public struct Horario
     {
         public int IdHorario { get; set; }
         public int IdDoctor { get; set; }
@@ -15,7 +15,7 @@ namespace UAM_INVESTIGATION.Estructuras
         public DateTime HoraFinal { get; set; }
         public string DiaSemana { get; set; }
 
-        public Horarios(int idHorario, int idDoctor, string especialidades, DateTime horaInicial, DateTime horaFinal, string diaSemana)
+        public Horario(int idHorario, int idDoctor, string especialidades, DateTime horaInicial, DateTime horaFinal, string diaSemana)
         {
             IdHorario = idHorario;
             IdDoctor = idDoctor;
