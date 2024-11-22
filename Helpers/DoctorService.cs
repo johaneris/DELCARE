@@ -63,20 +63,24 @@ namespace UAM_INVESTIGATION.Helpers
         public void DarDeBajaDoctor(int id)
         {
             var doctores = LeerDoctores();
-            bool doctorEncontrado = false;
 
             for (int i = 0; i < doctores.Count; i++)
             {
                 if (doctores[i].Id == id)
                 {
-                    doctores[i].Activo = false;
-                    doctorEncontrado = true;
+                    doctores[i] = new Doctor
+                    {
+                        Id = doctores[i].Id,
+                        Nombre = doctores[i].Nombre,
+                        Especialidad = doctores[i].Especialidad,
+                        Correo = doctores[i].Correo,
+                        Celular = doctores[i].Celular,
+                        Activo = false
+                    };
                     break;
+
                 }
             }
-
-            if (!doctorEncontrado)
-                throw new Exception("Doctor no encontrado.");
 
             try
             {
@@ -97,7 +101,6 @@ namespace UAM_INVESTIGATION.Helpers
         public void ActualizarDoctores(int idDoctor, string nombre, string especialidad, string correo, string celular)
         {
             var doctores = LeerDoctores();
-            bool doctorEncontrado = false;
 
             for (int i = 0; i < doctores.Count; i++)
             {
@@ -112,15 +115,10 @@ namespace UAM_INVESTIGATION.Helpers
                         Celular = celular,
                         Activo = doctores[i].Activo
                     };
-                    doctorEncontrado = true;
                     break;
                 }
             }
 
-            if (!doctorEncontrado)
-                throw new Exception("Doctor no encontrado.");
-
-            // Sobrescribe el archivo con la lista actualizada
             try
             {
                 using (StreamWriter sw = new StreamWriter(doctorFile))
@@ -130,10 +128,9 @@ namespace UAM_INVESTIGATION.Helpers
                         sw.WriteLine($"{doctor.Id}|{doctor.Nombre}|{doctor.Especialidad}|{doctor.Correo}|{doctor.Celular}|{doctor.Activo}");
                     }
                 }
-            }
-            catch (IOException ex)
+            }catch(IOException ex)
             {
-                throw new Exception($"Error al actualizar los doctores: {ex.Message}");
+                Console.WriteLine($"{ex.Message}");
             }
         }
 
