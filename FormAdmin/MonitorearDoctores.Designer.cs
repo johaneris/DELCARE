@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cmb_Especilidad = new System.Windows.Forms.ComboBox();
             this.txt_Celular = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmb_Especilidad = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -78,10 +78,27 @@
             this.panel2.Controls.Add(this.txt_Nombre);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(562, 0);
+            this.panel2.Location = new System.Drawing.Point(749, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(387, 427);
+            this.panel2.Size = new System.Drawing.Size(516, 526);
             this.panel2.TabIndex = 2;
+            // 
+            // cmb_Especilidad
+            // 
+            this.cmb_Especilidad.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmb_Especilidad.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Especilidad.FormattingEnabled = true;
+            this.cmb_Especilidad.Items.AddRange(new object[] {
+            "Dentista General",
+            "Endodoncista",
+            "Ortodoncia",
+            "Cirugía Maxilofacial"});
+            this.cmb_Especilidad.Location = new System.Drawing.Point(77, 196);
+            this.cmb_Especilidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_Especilidad.Name = "cmb_Especilidad";
+            this.cmb_Especilidad.Size = new System.Drawing.Size(359, 31);
+            this.cmb_Especilidad.TabIndex = 51;
             // 
             // txt_Celular
             // 
@@ -89,9 +106,10 @@
             this.txt_Celular.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Celular.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Celular.ForeColor = System.Drawing.Color.Black;
-            this.txt_Celular.Location = new System.Drawing.Point(58, 275);
+            this.txt_Celular.Location = new System.Drawing.Point(77, 338);
+            this.txt_Celular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Celular.Name = "txt_Celular";
-            this.txt_Celular.Size = new System.Drawing.Size(270, 20);
+            this.txt_Celular.Size = new System.Drawing.Size(360, 25);
             this.txt_Celular.TabIndex = 49;
             // 
             // label2
@@ -100,9 +118,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(54, 252);
+            this.label2.Location = new System.Drawing.Point(72, 310);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.Size = new System.Drawing.Size(78, 23);
             this.label2.TabIndex = 50;
             this.label2.Text = "Celular";
             // 
@@ -115,9 +134,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(156, 374);
+            this.button1.Location = new System.Drawing.Point(208, 460);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 40);
+            this.button1.Size = new System.Drawing.Size(104, 49);
             this.button1.TabIndex = 46;
             this.button1.Text = "Dar de Baja";
             this.button1.UseVisualStyleBackColor = false;
@@ -128,9 +148,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(54, 132);
+            this.label1.Location = new System.Drawing.Point(72, 162);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 20);
+            this.label1.Size = new System.Drawing.Size(125, 23);
             this.label1.TabIndex = 48;
             this.label1.Text = "Especialidad";
             // 
@@ -141,10 +162,10 @@
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
             this.iconPictureBox2.IconColor = System.Drawing.Color.Red;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 26;
-            this.iconPictureBox2.Location = new System.Drawing.Point(62, 344);
+            this.iconPictureBox2.Location = new System.Drawing.Point(83, 423);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(29, 26);
+            this.iconPictureBox2.Size = new System.Drawing.Size(39, 32);
             this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPictureBox2.TabIndex = 45;
             this.iconPictureBox2.TabStop = false;
@@ -156,9 +177,10 @@
             this.lblErrorMessage.BackColor = System.Drawing.Color.Transparent;
             this.lblErrorMessage.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorMessage.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblErrorMessage.Location = new System.Drawing.Point(88, 350);
+            this.lblErrorMessage.Location = new System.Drawing.Point(117, 431);
+            this.lblErrorMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblErrorMessage.Name = "lblErrorMessage";
-            this.lblErrorMessage.Size = new System.Drawing.Size(80, 16);
+            this.lblErrorMessage.Size = new System.Drawing.Size(102, 19);
             this.lblErrorMessage.TabIndex = 44;
             this.lblErrorMessage.Text = "Error Message";
             this.lblErrorMessage.Visible = false;
@@ -172,12 +194,14 @@
             this.btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Guardar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Guardar.ForeColor = System.Drawing.Color.Black;
-            this.btn_Guardar.Location = new System.Drawing.Point(246, 374);
+            this.btn_Guardar.Location = new System.Drawing.Point(328, 460);
+            this.btn_Guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Guardar.Name = "btn_Guardar";
-            this.btn_Guardar.Size = new System.Drawing.Size(78, 40);
+            this.btn_Guardar.Size = new System.Drawing.Size(104, 49);
             this.btn_Guardar.TabIndex = 34;
             this.btn_Guardar.Text = "Guardar";
             this.btn_Guardar.UseVisualStyleBackColor = false;
+            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
             // btn_Cancelar
             // 
@@ -188,9 +212,10 @@
             this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancelar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancelar.ForeColor = System.Drawing.Color.LightGray;
-            this.btn_Cancelar.Location = new System.Drawing.Point(64, 374);
+            this.btn_Cancelar.Location = new System.Drawing.Point(85, 460);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(78, 40);
+            this.btn_Cancelar.Size = new System.Drawing.Size(104, 49);
             this.btn_Cancelar.TabIndex = 35;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = false;
@@ -201,9 +226,10 @@
             this.txt_Correo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Correo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Correo.ForeColor = System.Drawing.Color.Black;
-            this.txt_Correo.Location = new System.Drawing.Point(58, 213);
+            this.txt_Correo.Location = new System.Drawing.Point(77, 262);
+            this.txt_Correo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Correo.Name = "txt_Correo";
-            this.txt_Correo.Size = new System.Drawing.Size(270, 20);
+            this.txt_Correo.Size = new System.Drawing.Size(360, 25);
             this.txt_Correo.TabIndex = 29;
             // 
             // label9
@@ -212,9 +238,10 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label9.Location = new System.Drawing.Point(54, 190);
+            this.label9.Location = new System.Drawing.Point(72, 234);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 20);
+            this.label9.Size = new System.Drawing.Size(72, 23);
             this.label9.TabIndex = 37;
             this.label9.Text = "Correo";
             // 
@@ -224,9 +251,10 @@
             this.txt_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nombre.ForeColor = System.Drawing.Color.Black;
-            this.txt_Nombre.Location = new System.Drawing.Point(59, 101);
+            this.txt_Nombre.Location = new System.Drawing.Point(79, 124);
+            this.txt_Nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Nombre.Name = "txt_Nombre";
-            this.txt_Nombre.Size = new System.Drawing.Size(270, 20);
+            this.txt_Nombre.Size = new System.Drawing.Size(360, 25);
             this.txt_Nombre.TabIndex = 28;
             // 
             // label5
@@ -235,9 +263,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(55, 78);
+            this.label5.Location = new System.Drawing.Point(73, 96);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 20);
+            this.label5.Size = new System.Drawing.Size(84, 23);
             this.label5.TabIndex = 36;
             this.label5.Text = "Nombre";
             // 
@@ -249,8 +278,9 @@
             this.panel3.Controls.Add(this.dgvUsuarios);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(562, 427);
+            this.panel3.Size = new System.Drawing.Size(749, 526);
             this.panel3.TabIndex = 3;
             // 
             // Btn_Salir
@@ -263,9 +293,10 @@
             this.Btn_Salir.IconColor = System.Drawing.Color.Black;
             this.Btn_Salir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_Salir.IconSize = 15;
-            this.Btn_Salir.Location = new System.Drawing.Point(3, 3);
+            this.Btn_Salir.Location = new System.Drawing.Point(4, 4);
+            this.Btn_Salir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Salir.Name = "Btn_Salir";
-            this.Btn_Salir.Size = new System.Drawing.Size(15, 15);
+            this.Btn_Salir.Size = new System.Drawing.Size(20, 18);
             this.Btn_Salir.TabIndex = 31;
             this.Btn_Salir.TabStop = false;
             this.Btn_Salir.UseVisualStyleBackColor = false;
@@ -277,9 +308,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(161, 42);
+            this.label7.Location = new System.Drawing.Point(215, 52);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(222, 27);
+            this.label7.Size = new System.Drawing.Size(277, 33);
             this.label7.TabIndex = 30;
             this.label7.Text = "Monitorear Doctores";
             // 
@@ -307,7 +339,8 @@
             this.Estado});
             this.dgvUsuarios.EnableHeadersVisualStyles = false;
             this.dgvUsuarios.GridColor = System.Drawing.Color.Gainsboro;
-            this.dgvUsuarios.Location = new System.Drawing.Point(12, 117);
+            this.dgvUsuarios.Location = new System.Drawing.Point(16, 144);
+            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -325,7 +358,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.PowderBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvUsuarios.Size = new System.Drawing.Size(536, 213);
+            this.dgvUsuarios.Size = new System.Drawing.Size(715, 262);
             this.dgvUsuarios.TabIndex = 3;
             this.dgvUsuarios.TabStop = false;
             // 
@@ -341,22 +374,28 @@
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 125;
             // 
             // Especialidad
             // 
             this.Especialidad.HeaderText = "Especialidad";
             this.Especialidad.MinimumWidth = 6;
             this.Especialidad.Name = "Especialidad";
+            this.Especialidad.Width = 125;
             // 
             // Correo
             // 
             this.Correo.HeaderText = "Correo";
+            this.Correo.MinimumWidth = 6;
             this.Correo.Name = "Correo";
+            this.Correo.Width = 125;
             // 
             // Celular
             // 
             this.Celular.HeaderText = "Celular";
+            this.Celular.MinimumWidth = 6;
             this.Celular.Name = "Celular";
+            this.Celular.Width = 125;
             // 
             // Estado
             // 
@@ -365,29 +404,15 @@
             this.Estado.Name = "Estado";
             this.Estado.Width = 50;
             // 
-            // cmb_Especilidad
-            // 
-            this.cmb_Especilidad.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmb_Especilidad.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Especilidad.FormattingEnabled = true;
-            this.cmb_Especilidad.Items.AddRange(new object[] {
-            "Dentista General",
-            "Endodoncista",
-            "Ortodoncia",
-            "Cirugía Maxilofacial"});
-            this.cmb_Especilidad.Location = new System.Drawing.Point(58, 159);
-            this.cmb_Especilidad.Name = "cmb_Especilidad";
-            this.cmb_Especilidad.Size = new System.Drawing.Size(270, 28);
-            this.cmb_Especilidad.TabIndex = 51;
-            // 
             // MonitorearDoctores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MonitorearDoctores";
-            this.Size = new System.Drawing.Size(949, 427);
+            this.Size = new System.Drawing.Size(1265, 526);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();

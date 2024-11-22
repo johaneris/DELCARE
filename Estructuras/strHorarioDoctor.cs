@@ -6,14 +6,25 @@ using System.Threading.Tasks;
 
 namespace UAM_INVESTIGATION.Estructuras
 {
-    public class strHorarioDoctor
+    public class Doctor
+
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public string Especialidad { get; set; }
         public string Correo { get; set; }
         public string Celular { get; set; }
-        public string Estado { get; set; }
+        public bool Activo { get; set; }
+
+        public Doctor(int id, string nombre, string especialidad, string correo, string celular, bool activo)
+        {
+            Id = id;
+            Nombre = nombre;
+            Especialidad = especialidad;
+            Correo = correo;
+            Celular = celular;
+            Activo = activo;
+        }
 
     }
 
