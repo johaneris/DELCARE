@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UAM_INVESTIGATION.Estructuras
 {
-    public class Doctor
+    public struct Doctor
 
     {
         public int Id { get; set; }
