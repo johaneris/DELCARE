@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using UAM_INVESTIGATION.BasesdeDatos;
+//using UAM_INVESTIGATION.BasesdeDatos;
 using System.Data.SQLite;
 
 
@@ -32,6 +32,7 @@ namespace UAM_INVESTIGATION.FormAdmin
 
         private void ConfigurarDataGridView()
         {
+            /*
             // Definir columnas si no están definidas desde el diseñador
             if (dataGridViewHorarios.Columns.Count == 0)
             {
@@ -39,7 +40,7 @@ namespace UAM_INVESTIGATION.FormAdmin
                 dataGridViewHorarios.Columns.Add("DiaSemana", "Día de la Semana");
                 dataGridViewHorarios.Columns.Add("HoraInicio", "Hora de Inicio");
                 dataGridViewHorarios.Columns.Add("HoraFin", "Hora de Fin");
-            }
+            }*/
         }
 
        

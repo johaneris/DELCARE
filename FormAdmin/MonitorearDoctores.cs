@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UAM_INVESTIGATION.FormEstudiantes
+namespace UAM_INVESTIGATION.FormAdmin
 {
-    public partial class Agendar_citas : UserControl
+    public partial class MonitorearDoctores : UserControl
     {
-        public Agendar_citas()
+        public MonitorearDoctores()
         {
             InitializeComponent();
-        }
-
-        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void Btn_Salir_Click(object sender, EventArgs e)

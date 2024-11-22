@@ -62,8 +62,6 @@ namespace UAM_INVESTIGATION.FormAdmin
             lbl_Id.Text = "";
             lbl_Nombre.Text = "";
             lbl_Correo.Text = "";
-            lbl_Cif.Text = "";
-            lbl_Carrera.Text = "";
             lbl_Estado.Text = "";
             dgvUsuarios.ClearSelection();
         }
@@ -84,8 +82,6 @@ namespace UAM_INVESTIGATION.FormAdmin
                     lbl_Id.Text = "";
                     lbl_Nombre.Text = "";
                     lbl_Correo.Text = "";
-                    lbl_Cif.Text = "";
-                    lbl_Carrera.Text = "";
                     lbl_Estado.Text = "";
                     // Recargar los usuarios en el DataGridView
                     CargarUsuarios();
@@ -106,9 +102,7 @@ namespace UAM_INVESTIGATION.FormAdmin
                 lbl_Id.Text = filaSeleccionada.Cells[0].Value != null ? filaSeleccionada.Cells[0].Value.ToString() : "N/A";
                 lbl_Nombre.Text = filaSeleccionada.Cells[1].Value != null ? filaSeleccionada.Cells[1].Value.ToString() : "N/A";
                 lbl_Correo.Text = filaSeleccionada.Cells[2].Value != null ? filaSeleccionada.Cells[2].Value.ToString() : "N/A";
-                lbl_Cif.Text = filaSeleccionada.Cells[3].Value != null ? filaSeleccionada.Cells[3].Value.ToString() : "N/A";
-                lbl_Carrera.Text = filaSeleccionada.Cells[4].Value != null ? filaSeleccionada.Cells[4].Value.ToString() : "N/A";
-                lbl_Estado.Text = filaSeleccionada.Cells[5].Value != null ? filaSeleccionada.Cells[5].Value.ToString() : "N/A";
+                lbl_Estado.Text = filaSeleccionada.Cells[3].Value != null ? filaSeleccionada.Cells[5].Value.ToString() : "N/A";
             }
         }
 

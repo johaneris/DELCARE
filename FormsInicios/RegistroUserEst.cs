@@ -128,7 +128,7 @@ namespace UAM_INVESTIGATION.Forms
             if (txt_Correo.Text == "CORREO")
             {
                 txt_Correo.Text = "";
-                txt_Correo.ForeColor = Color.LightGray;
+                txt_Correo.ForeColor = Color.Black;
             }
         }
 
@@ -147,7 +147,7 @@ namespace UAM_INVESTIGATION.Forms
             if (txt_Contrasenia.Text == "CONTRASEÑA")
             {
                 txt_Contrasenia.Text = "";
-                txt_Contrasenia.ForeColor = Color.LightGray;
+                txt_Contrasenia.ForeColor = Color.Black;
                 txt_Contrasenia.UseSystemPasswordChar = true;
             }
         }
@@ -167,7 +167,7 @@ namespace UAM_INVESTIGATION.Forms
             if (txt_Nombre.Text == "NOMBRE COMPLETO")
             {
                 txt_Nombre.Text = "";
-                txt_Nombre.ForeColor = Color.LightGray;
+                txt_Nombre.ForeColor = Color.Black;
             }
         }
 

@@ -220,7 +220,7 @@ namespace UAM_INVESTIGATION.Helpers
             }
         }
 
-        public void ActualizarUsuarioEst(int id, string nuevoNombre, string nuevoCorreo, string nuevoCif, string nuevaContrasenia, string nuevaCarrera, bool estado)
+        public void ActualizarUsuarioEst(int id, string nuevoNombre, string nuevoCorreo, string nuevaContrasenia, bool estado)
         {
             var estudiantes = LeerUsuariosEst();
             for (int i = 0; i < estudiantes.Count; i++)

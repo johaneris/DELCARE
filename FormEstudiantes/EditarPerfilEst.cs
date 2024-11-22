@@ -15,10 +15,8 @@ namespace UAM_INVESTIGATION.FormEstudiantes
     public partial class EditarPerfilEst : UserControl
     {
         private string correo;
-        private string cif;
         private string contrasenia;
         private string nombre;
-        private string carrera;
         private int Id;
         private bool estado;
         public EditarPerfilEst(string correo)
@@ -44,9 +42,7 @@ namespace UAM_INVESTIGATION.FormEstudiantes
                 //Actualizar labels
                 lbl_Id.Text = Id.ToString();
                 lbl_Correo.Text = correoCache;
-                lbl_Cif.Text = cif;
                 lbl_Nombre.Text = nombre;
-                lbl_Carrera.Text = carrera;
             }
         }
 
@@ -69,8 +65,6 @@ namespace UAM_INVESTIGATION.FormEstudiantes
         {
             string nombre = txt_Nombre.Text;
             string correo = txt_Correo.Text;
-            string cif = txt_Cif.Text;
-            string carrera = txt_Carrera.Text;
             string contrasenia = txt_Contrasenia.Text;
             string contraseniaConfirm = txt_ContraseniaConfirm.Text;
             string contraseniaCurrent = txt_CurrentContrasenia.Text;
@@ -79,10 +73,6 @@ namespace UAM_INVESTIGATION.FormEstudiantes
             {
                 if(txt_Correo.Text != "")
                 {
-                    if(txt_Cif.Text != "")
-                    {
-                        if(txt_Carrera.Text != "")
-                        {
                             if(txt_Contrasenia.Text != "" || txt_ContraseniaConfirm.Text != "")
                             {
                                 if(contrasenia == contraseniaConfirm)
@@ -97,12 +87,11 @@ namespace UAM_INVESTIGATION.FormEstudiantes
 
                                             try
                                             {
-                                                initRegis.ActualizarUsuarioEst(Id, nombre, correo, cif, contraseniaCurrent, carrera, estado);
+                                                initRegis.ActualizarUsuarioEst(Id, nombre, correo, contraseniaCurrent, estado);
                                                 MessageBox.Show("El perfil se actualizó correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                                 txt_Nombre.Clear();
                                                 txt_Correo.Clear();
-                                                txt_Cif.Clear();
-                                                txt_Carrera.Clear();
+
                                                 txt_Contrasenia.Clear();
                                                 txt_ContraseniaConfirm.Clear();
                                                 txt_CurrentContrasenia.Clear();
@@ -129,16 +118,7 @@ namespace UAM_INVESTIGATION.FormEstudiantes
                             {
                                 msgError("Porfavor ingrese la contraseña");
                             }
-                        }
-                        else
-                        {
-                            msgError("Porfavor ingrese la carrera");
-                        }
-                    }
-                    else
-                    {
-                        msgError("Porfavor ingrese el cif");
-                    }
+                        
                 }
                 else
                 {
@@ -155,8 +135,6 @@ namespace UAM_INVESTIGATION.FormEstudiantes
         {
             txt_Nombre.Clear();
             txt_Correo.Clear();
-            txt_Cif.Clear();
-            txt_Carrera.Clear();
             txt_Contrasenia.Clear();
             txt_ContraseniaConfirm.Clear();
             txt_CurrentContrasenia.Clear();

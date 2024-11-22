@@ -47,7 +47,6 @@
             this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_Nombre = new System.Windows.Forms.Label();
@@ -58,6 +57,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.Btn_Salir = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -65,7 +65,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(126)))), ((int)(((byte)(133)))));
             this.panel1.Controls.Add(this.iconPictureBox2);
             this.panel1.Controls.Add(this.lblErrorMessage);
             this.panel1.Controls.Add(this.btn_Guardar);
@@ -111,7 +111,7 @@
             this.lblErrorMessage.AutoSize = true;
             this.lblErrorMessage.BackColor = System.Drawing.Color.Transparent;
             this.lblErrorMessage.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorMessage.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblErrorMessage.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblErrorMessage.Location = new System.Drawing.Point(76, 350);
             this.lblErrorMessage.Name = "lblErrorMessage";
             this.lblErrorMessage.Size = new System.Drawing.Size(80, 16);
@@ -121,13 +121,13 @@
             // 
             // btn_Guardar
             // 
-            this.btn_Guardar.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btn_Guardar.BackColor = System.Drawing.Color.LightBlue;
             this.btn_Guardar.FlatAppearance.BorderSize = 0;
             this.btn_Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btn_Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Guardar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Guardar.ForeColor = System.Drawing.Color.LightGray;
+            this.btn_Guardar.ForeColor = System.Drawing.Color.Black;
             this.btn_Guardar.Location = new System.Drawing.Point(191, 374);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.Size = new System.Drawing.Size(98, 40);
@@ -191,10 +191,10 @@
             // 
             // txt_CurrentContrasenia
             // 
-            this.txt_CurrentContrasenia.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.txt_CurrentContrasenia.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_CurrentContrasenia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_CurrentContrasenia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CurrentContrasenia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_CurrentContrasenia.ForeColor = System.Drawing.Color.Black;
             this.txt_CurrentContrasenia.Location = new System.Drawing.Point(41, 318);
             this.txt_CurrentContrasenia.Name = "txt_CurrentContrasenia";
             this.txt_CurrentContrasenia.Size = new System.Drawing.Size(270, 20);
@@ -214,10 +214,10 @@
             // 
             // txt_ContraseniaConfirm
             // 
-            this.txt_ContraseniaConfirm.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.txt_ContraseniaConfirm.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_ContraseniaConfirm.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_ContraseniaConfirm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ContraseniaConfirm.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_ContraseniaConfirm.ForeColor = System.Drawing.Color.Black;
             this.txt_ContraseniaConfirm.Location = new System.Drawing.Point(41, 260);
             this.txt_ContraseniaConfirm.Name = "txt_ContraseniaConfirm";
             this.txt_ContraseniaConfirm.Size = new System.Drawing.Size(270, 20);
@@ -237,10 +237,10 @@
             // 
             // txt_Contrasenia
             // 
-            this.txt_Contrasenia.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.txt_Contrasenia.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_Contrasenia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Contrasenia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Contrasenia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_Contrasenia.ForeColor = System.Drawing.Color.Black;
             this.txt_Contrasenia.Location = new System.Drawing.Point(41, 196);
             this.txt_Contrasenia.Name = "txt_Contrasenia";
             this.txt_Contrasenia.Size = new System.Drawing.Size(270, 20);
@@ -260,10 +260,10 @@
             // 
             // txt_Correo
             // 
-            this.txt_Correo.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.txt_Correo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_Correo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Correo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Correo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_Correo.ForeColor = System.Drawing.Color.Black;
             this.txt_Correo.Location = new System.Drawing.Point(41, 137);
             this.txt_Correo.Name = "txt_Correo";
             this.txt_Correo.Size = new System.Drawing.Size(270, 20);
@@ -283,10 +283,10 @@
             // 
             // txt_Nombre
             // 
-            this.txt_Nombre.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.txt_Nombre.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Nombre.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_Nombre.ForeColor = System.Drawing.Color.Black;
             this.txt_Nombre.Location = new System.Drawing.Point(41, 82);
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(270, 20);
@@ -316,24 +316,12 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Editar Perfil";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(40, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 27);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Perfil Personal";
-            // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Black;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.DimGray;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Black;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.DimGray;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 151;
             this.iconPictureBox1.Location = new System.Drawing.Point(45, 62);
@@ -348,7 +336,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(202, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
@@ -384,7 +372,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.Location = new System.Drawing.Point(202, 157);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 20);
@@ -408,7 +396,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
             this.label6.Location = new System.Drawing.Point(202, 62);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 20);
@@ -432,7 +420,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
             this.label8.Location = new System.Drawing.Point(202, 203);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 20);
@@ -457,11 +445,24 @@
             this.Btn_Salir.UseVisualStyleBackColor = false;
             this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(83, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 27);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Perfil";
+            // 
             // EditarPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(246)))), ((int)(((byte)(244)))));
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Btn_Salir);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
@@ -472,7 +473,6 @@
             this.Controls.Add(this.lbl_Nombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.iconPictureBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "EditarPerfil";
             this.Size = new System.Drawing.Size(748, 427);
@@ -489,7 +489,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_Nombre;
@@ -518,5 +517,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.Label lblErrorMessage;
         private FontAwesome.Sharp.IconButton Btn_Salir;
+        private System.Windows.Forms.Label label1;
     }
 }

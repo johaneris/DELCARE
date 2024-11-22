@@ -61,7 +61,7 @@ namespace UAM_INVESTIGATION.Forms
             string cif = null;
             int type = 0;
 
-            if (txt_CorreoCif.Text != "CORREO O CIF")
+            if (txt_CorreoCif.Text != "CORREO")
             {
                 if(txt_Contrasenia.Text != "CONTRASEÑA")
                 {
@@ -116,7 +116,7 @@ namespace UAM_INVESTIGATION.Forms
                     }
                     else
                     {
-                        msgError("El Correo/Cif o la Contraseña son incorrectos.");
+                        msgError("El Correo o la Contraseña son incorrectos.");
                         txt_Contrasenia.Clear();
                         txt_CorreoCif.Focus();
                     }
@@ -154,10 +154,10 @@ namespace UAM_INVESTIGATION.Forms
         //PLACEHOLDERS
         private void txt_CorreoCif_Enter(object sender, EventArgs e)
         {
-            if(txt_CorreoCif.Text == "CORREO O CIF")
+            if(txt_CorreoCif.Text == "CORREO")
             {
                 txt_CorreoCif.Text = "";
-                txt_CorreoCif.ForeColor = Color.LightGray;
+                txt_CorreoCif.ForeColor = Color.Black;
             }
         }
 
@@ -165,7 +165,7 @@ namespace UAM_INVESTIGATION.Forms
         {
             if (txt_CorreoCif.Text == "")
             {
-                txt_CorreoCif.Text = "CORREO O CIF";
+                txt_CorreoCif.Text = "CORREO";
                 txt_CorreoCif.ForeColor = Color.DimGray;
             }
 
@@ -176,7 +176,7 @@ namespace UAM_INVESTIGATION.Forms
             if (txt_Contrasenia.Text == "CONTRASEÑA")
             {
                 txt_Contrasenia.Text = "";
-                txt_Contrasenia.ForeColor = Color.LightGray;
+                txt_Contrasenia.ForeColor = Color.Black;
                 txt_Contrasenia.UseSystemPasswordChar = true;
             }
         }

@@ -122,11 +122,23 @@
     <Compile Include="FormAdmin\EditarPerfil.Designer.cs">
       <DependentUpon>EditarPerfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAdmin\GestionarHorarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormAdmin\GestionarHorarios.Designer.cs">
+      <DependentUpon>GestionarHorarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAdmin\Horarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="FormAdmin\Horarios.Designer.cs">
       <DependentUpon>Horarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdmin\MonitorearDoctores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormAdmin\MonitorearDoctores.Designer.cs">
+      <DependentUpon>MonitorearDoctores.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAdmin\MonitoreoUsers.cs">
       <SubType>UserControl</SubType>
@@ -157,12 +169,6 @@
     </Compile>
     <Compile Include="FormEstudiantes\PrincipalEst.Designer.cs">
       <DependentUpon>PrincipalEst.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormEstudiantes\TrabajosPropios.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormEstudiantes\TrabajosPropios.Designer.cs">
-      <DependentUpon>TrabajosPropios.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsInicios\Bienvenida.cs">
       <SubType>Form</SubType>
@@ -207,8 +213,14 @@
     <EmbeddedResource Include="FormAdmin\EditarPerfil.resx">
       <DependentUpon>EditarPerfil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAdmin\GestionarHorarios.resx">
+      <DependentUpon>GestionarHorarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAdmin\Horarios.resx">
       <DependentUpon>Horarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdmin\MonitorearDoctores.resx">
+      <DependentUpon>MonitorearDoctores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdmin\MonitoreoUsers.resx">
       <DependentUpon>MonitoreoUsers.cs</DependentUpon>
@@ -224,9 +236,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEstudiantes\PrincipalEst.resx">
       <DependentUpon>PrincipalEst.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormEstudiantes\TrabajosPropios.resx">
-      <DependentUpon>TrabajosPropios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsInicios\Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
@@ -295,6 +304,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Diseño sin título %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_eslogan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-female-dentist-curing-boy-in-chair-picture-image_8709139.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

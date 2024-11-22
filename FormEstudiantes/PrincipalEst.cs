@@ -43,9 +43,12 @@ namespace UAM_INVESTIGATION.FormEstudiantes
         private void Btn_LogOut_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Estas seguro que deseas cerrar sesión?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
                 this.Close();
-            pantalla_Principal pantalla_Principal = new pantalla_Principal();
-            pantalla_Principal.Show();
+                pantalla_Principal pantalla_Principal = new pantalla_Principal();
+                pantalla_Principal.Show();
+            }
+
         }
 
         private void Btn_Perfil_Click(object sender, EventArgs e)

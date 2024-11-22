@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UAM_INVESTIGATION.FormEstudiantes
+namespace UAM_INVESTIGATION.FormAdmin
 {
-    public partial class TrabajosPropios : UserControl
+    public partial class GestionarHorarios : UserControl
     {
-        public TrabajosPropios()
+        public GestionarHorarios()
         {
             InitializeComponent();
+        }
+
+        private void Btn_Salir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
