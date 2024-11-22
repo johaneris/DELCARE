@@ -113,6 +113,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Estructuras\strHorarioDoctor.cs" />
     <Compile Include="Estructuras\StrUsuarioAdmin.cs" />
     <Compile Include="Estructuras\StrUsuarioEst.cs" />
     <Compile Include="FormAdmin\EditarPerfil.cs">
