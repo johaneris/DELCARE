@@ -60,11 +60,6 @@ namespace UAM_INVESTIGATION.FormAdmin
             pnl_Contenido.Controls.Add(editarPerfil);
         }
 
-        private void Btn_Reportes_Click(object sender, EventArgs e)
-        {
-            
-        }
-
 
         private void btn_GestionarUsuarios(object sender, EventArgs e)
         {

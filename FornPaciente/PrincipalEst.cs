@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UAM_INVESTIGATION.FormAdmin;
+using UAM_INVESTIGATION.FornPaciente;
 
 namespace UAM_INVESTIGATION.FormEstudiantes
 {
@@ -59,6 +60,15 @@ namespace UAM_INVESTIGATION.FormEstudiantes
             //Agregar el UserControl al Panel
             editarPerfilEst.Dock = DockStyle.Fill;
             pnl_Content.Controls.Add(editarPerfilEst);
+        }
+
+        private void Btno_Horarios_Click(object sender, EventArgs e)
+        {
+            ConsultarHorarios consultarHorarios = new ConsultarHorarios();
+            pnl_Content.Controls.Clear();
+
+            consultarHorarios.Dock = DockStyle.Fill;
+            pnl_Content.Controls.Add(consultarHorarios);
         }
     }
 }

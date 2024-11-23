@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_minisize = new FontAwesome.Sharp.IconButton();
+            this.Btn_Salir = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblCif = new System.Windows.Forms.Label();
-            this.lblCorreo = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pnl_Content = new System.Windows.Forms.Panel();
             this.Btno_Horarios = new FontAwesome.Sharp.IconButton();
             this.Btn_HistorialCitas = new FontAwesome.Sharp.IconButton();
             this.Btn_AgendarCitas = new FontAwesome.Sharp.IconButton();
             this.Btn_Perfil = new FontAwesome.Sharp.IconButton();
             this.Btn_LogOut = new FontAwesome.Sharp.IconButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblCif = new System.Windows.Forms.Label();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.btn_minisize = new FontAwesome.Sharp.IconButton();
-            this.Btn_Salir = new FontAwesome.Sharp.IconButton();
+            this.pnl_Content = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -62,6 +62,42 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1090, 34);
             this.panel1.TabIndex = 1;
+            // 
+            // btn_minisize
+            // 
+            this.btn_minisize.BackColor = System.Drawing.Color.Transparent;
+            this.btn_minisize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_minisize.FlatAppearance.BorderSize = 0;
+            this.btn_minisize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_minisize.IconChar = FontAwesome.Sharp.IconChar.Compress;
+            this.btn_minisize.IconColor = System.Drawing.Color.Gainsboro;
+            this.btn_minisize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_minisize.IconSize = 20;
+            this.btn_minisize.Location = new System.Drawing.Point(1050, 3);
+            this.btn_minisize.Name = "btn_minisize";
+            this.btn_minisize.Size = new System.Drawing.Size(15, 15);
+            this.btn_minisize.TabIndex = 18;
+            this.btn_minisize.TabStop = false;
+            this.btn_minisize.UseVisualStyleBackColor = false;
+            this.btn_minisize.Click += new System.EventHandler(this.btn_minisize_Click);
+            // 
+            // Btn_Salir
+            // 
+            this.Btn_Salir.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_Salir.FlatAppearance.BorderSize = 0;
+            this.Btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Salir.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.Btn_Salir.IconColor = System.Drawing.Color.Gainsboro;
+            this.Btn_Salir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Btn_Salir.IconSize = 15;
+            this.Btn_Salir.Location = new System.Drawing.Point(1071, 3);
+            this.Btn_Salir.Name = "Btn_Salir";
+            this.Btn_Salir.Size = new System.Drawing.Size(15, 15);
+            this.Btn_Salir.TabIndex = 17;
+            this.Btn_Salir.TabStop = false;
+            this.Btn_Salir.UseVisualStyleBackColor = false;
+            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
             // label1
             // 
@@ -89,75 +125,6 @@
             this.panel2.Size = new System.Drawing.Size(200, 477);
             this.panel2.TabIndex = 2;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(126)))), ((int)(((byte)(133)))));
-            this.panel3.Controls.Add(this.lblCif);
-            this.panel3.Controls.Add(this.lblCorreo);
-            this.panel3.Controls.Add(this.lblNombre);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.iconPictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 81);
-            this.panel3.TabIndex = 0;
-            // 
-            // lblCif
-            // 
-            this.lblCif.AutoSize = true;
-            this.lblCif.Font = new System.Drawing.Font("Century", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCif.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblCif.Location = new System.Drawing.Point(47, 56);
-            this.lblCif.Name = "lblCif";
-            this.lblCif.Size = new System.Drawing.Size(22, 15);
-            this.lblCif.TabIndex = 7;
-            this.lblCif.Text = "Cif";
-            // 
-            // lblCorreo
-            // 
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Font = new System.Drawing.Font("Century", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblCorreo.Location = new System.Drawing.Point(47, 41);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(43, 15);
-            this.lblCorreo.TabIndex = 6;
-            this.lblCorreo.Text = "Correo";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Century", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblNombre.Location = new System.Drawing.Point(47, 26);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(38, 15);
-            this.lblNombre.TabIndex = 5;
-            this.lblNombre.Text = "Name";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(47, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Estudiante";
-            // 
-            // pnl_Content
-            // 
-            this.pnl_Content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(246)))), ((int)(((byte)(244)))));
-            this.pnl_Content.BackgroundImage = global::UAM_INVESTIGATION.Properties.Resources.youtube_profile_image;
-            this.pnl_Content.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnl_Content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_Content.Location = new System.Drawing.Point(200, 34);
-            this.pnl_Content.Name = "pnl_Content";
-            this.pnl_Content.Size = new System.Drawing.Size(890, 477);
-            this.pnl_Content.TabIndex = 3;
-            // 
             // Btno_Horarios
             // 
             this.Btno_Horarios.Dock = System.Windows.Forms.DockStyle.Top;
@@ -179,6 +146,7 @@
             this.Btno_Horarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btno_Horarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btno_Horarios.UseVisualStyleBackColor = true;
+            this.Btno_Horarios.Click += new System.EventHandler(this.Btno_Horarios_Click);
             // 
             // Btn_HistorialCitas
             // 
@@ -270,6 +238,64 @@
             this.Btn_LogOut.UseVisualStyleBackColor = true;
             this.Btn_LogOut.Click += new System.EventHandler(this.Btn_LogOut_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(126)))), ((int)(((byte)(133)))));
+            this.panel3.Controls.Add(this.lblCif);
+            this.panel3.Controls.Add(this.lblCorreo);
+            this.panel3.Controls.Add(this.lblNombre);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.iconPictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 81);
+            this.panel3.TabIndex = 0;
+            // 
+            // lblCif
+            // 
+            this.lblCif.AutoSize = true;
+            this.lblCif.Font = new System.Drawing.Font("Century", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCif.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblCif.Location = new System.Drawing.Point(47, 56);
+            this.lblCif.Name = "lblCif";
+            this.lblCif.Size = new System.Drawing.Size(22, 15);
+            this.lblCif.TabIndex = 7;
+            this.lblCif.Text = "Cif";
+            // 
+            // lblCorreo
+            // 
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Century", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblCorreo.Location = new System.Drawing.Point(47, 41);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(43, 15);
+            this.lblCorreo.TabIndex = 6;
+            this.lblCorreo.Text = "Correo";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Century", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblNombre.Location = new System.Drawing.Point(47, 26);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(38, 15);
+            this.lblNombre.TabIndex = 5;
+            this.lblNombre.Text = "Name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.Location = new System.Drawing.Point(47, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 15);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Estudiante";
+            // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(126)))), ((int)(((byte)(133)))));
@@ -286,41 +312,16 @@
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
             // 
-            // btn_minisize
+            // pnl_Content
             // 
-            this.btn_minisize.BackColor = System.Drawing.Color.Transparent;
-            this.btn_minisize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_minisize.FlatAppearance.BorderSize = 0;
-            this.btn_minisize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_minisize.IconChar = FontAwesome.Sharp.IconChar.Compress;
-            this.btn_minisize.IconColor = System.Drawing.Color.Gainsboro;
-            this.btn_minisize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_minisize.IconSize = 20;
-            this.btn_minisize.Location = new System.Drawing.Point(1050, 3);
-            this.btn_minisize.Name = "btn_minisize";
-            this.btn_minisize.Size = new System.Drawing.Size(15, 15);
-            this.btn_minisize.TabIndex = 18;
-            this.btn_minisize.TabStop = false;
-            this.btn_minisize.UseVisualStyleBackColor = false;
-            this.btn_minisize.Click += new System.EventHandler(this.btn_minisize_Click);
-            // 
-            // Btn_Salir
-            // 
-            this.Btn_Salir.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Salir.FlatAppearance.BorderSize = 0;
-            this.Btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Salir.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.Btn_Salir.IconColor = System.Drawing.Color.Gainsboro;
-            this.Btn_Salir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Btn_Salir.IconSize = 15;
-            this.Btn_Salir.Location = new System.Drawing.Point(1071, 3);
-            this.Btn_Salir.Name = "Btn_Salir";
-            this.Btn_Salir.Size = new System.Drawing.Size(15, 15);
-            this.Btn_Salir.TabIndex = 17;
-            this.Btn_Salir.TabStop = false;
-            this.Btn_Salir.UseVisualStyleBackColor = false;
-            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
+            this.pnl_Content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(246)))), ((int)(((byte)(244)))));
+            this.pnl_Content.BackgroundImage = global::UAM_INVESTIGATION.Properties.Resources.youtube_profile_image;
+            this.pnl_Content.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnl_Content.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_Content.Location = new System.Drawing.Point(200, 34);
+            this.pnl_Content.Name = "pnl_Content";
+            this.pnl_Content.Size = new System.Drawing.Size(890, 477);
+            this.pnl_Content.TabIndex = 3;
             // 
             // PrincipalEst
             // 

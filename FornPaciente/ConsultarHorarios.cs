@@ -78,6 +78,7 @@ namespace UAM_INVESTIGATION.FornPaciente
         private void ConsultarHorarios_Load(object sender, EventArgs e)
         {
             CargarHorarios();
+            CargarDoctores();
         }
 
         private void btn_Deshacer_Click(object sender, EventArgs e)
