@@ -28,7 +28,8 @@ namespace UAM_INVESTIGATION.Helpers
             {
                 using (StreamWriter sw = new StreamWriter(doctorFile, true))
                 {
-                    sw.WriteLine($"{doctor.Id}|{doctor.Nombre}|{doctor.Especialidad}|{doctor.Correo}|{doctor.Celular}|{doctor.Activo}");
+                    
+                    sw.WriteLine($"{doctor.Id}|{doctor.Nombre}|{doctor.Especialidad}|{doctor.Correo}|{doctor.Celular}|{doctor.Activo = true}");
                 }
             }
             catch (IOException ex)

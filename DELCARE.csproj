@@ -218,6 +218,7 @@
     <Compile Include="FormsInicios\RegistroUserEst.Designer.cs">
       <DependentUpon>RegistroUserEst.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ControlHorario.cs" />
     <Compile Include="Helpers\DoctorService.cs" />
     <Compile Include="Helpers\InitRegis.cs" />
     <Compile Include="Program.cs" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,12 +29,23 @@ namespace UAM_INVESTIGATION.Estructuras
 
     }
 
-    public class Horario
+    public struct Horario
     {
         public int ID { get; set; }
         public int DoctorID { get; set; }
         public DateTime HoraInicial { get; set; }
         public DateTime HoraFinal { get; set; }
         public string DiaSemana { get; set; }
+        public bool Activo { get; set; }
+
+        public Horario(int IdHorario, int idDoctor, DateTime horaInicial, DateTime horaFinal, string diaSemana, bool activo)
+        {
+            ID = IdHorario;
+            DoctorID = idDoctor;
+            HoraInicial = horaInicial;
+            HoraFinal = horaFinal;
+            DiaSemana = diaSemana;
+            Activo = activo;
+        }
     }
 }
