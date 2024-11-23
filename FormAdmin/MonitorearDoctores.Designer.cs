@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmb_Especilidad = new System.Windows.Forms.ComboBox();
             this.txt_Celular = new System.Windows.Forms.TextBox();
@@ -48,7 +48,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.Btn_Salir = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.dgvDoctores = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +58,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoctores)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -79,7 +79,7 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(749, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(516, 526);
             this.panel2.TabIndex = 2;
@@ -89,13 +89,8 @@
             this.cmb_Especilidad.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cmb_Especilidad.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Especilidad.FormattingEnabled = true;
-            this.cmb_Especilidad.Items.AddRange(new object[] {
-            "Dentista General",
-            "Endodoncista",
-            "Ortodoncia",
-            "Cirugía Maxilofacial"});
             this.cmb_Especilidad.Location = new System.Drawing.Point(77, 196);
-            this.cmb_Especilidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_Especilidad.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_Especilidad.Name = "cmb_Especilidad";
             this.cmb_Especilidad.Size = new System.Drawing.Size(359, 31);
             this.cmb_Especilidad.TabIndex = 51;
@@ -107,7 +102,7 @@
             this.txt_Celular.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Celular.ForeColor = System.Drawing.Color.Black;
             this.txt_Celular.Location = new System.Drawing.Point(77, 338);
-            this.txt_Celular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Celular.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Celular.Name = "txt_Celular";
             this.txt_Celular.Size = new System.Drawing.Size(360, 25);
             this.txt_Celular.TabIndex = 49;
@@ -135,12 +130,13 @@
             this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(208, 460);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 49);
             this.button1.TabIndex = 46;
             this.button1.Text = "Dar de Baja";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -163,7 +159,7 @@
             this.iconPictureBox2.IconColor = System.Drawing.Color.Red;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox2.Location = new System.Drawing.Point(83, 423);
-            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Size = new System.Drawing.Size(39, 32);
             this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -195,7 +191,7 @@
             this.btn_Guardar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Guardar.ForeColor = System.Drawing.Color.Black;
             this.btn_Guardar.Location = new System.Drawing.Point(328, 460);
-            this.btn_Guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Guardar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.Size = new System.Drawing.Size(104, 49);
             this.btn_Guardar.TabIndex = 34;
@@ -213,12 +209,13 @@
             this.btn_Cancelar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancelar.ForeColor = System.Drawing.Color.LightGray;
             this.btn_Cancelar.Location = new System.Drawing.Point(85, 460);
-            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(104, 49);
             this.btn_Cancelar.TabIndex = 35;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = false;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // txt_Correo
             // 
@@ -227,7 +224,7 @@
             this.txt_Correo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Correo.ForeColor = System.Drawing.Color.Black;
             this.txt_Correo.Location = new System.Drawing.Point(77, 262);
-            this.txt_Correo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Correo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Correo.Name = "txt_Correo";
             this.txt_Correo.Size = new System.Drawing.Size(360, 25);
             this.txt_Correo.TabIndex = 29;
@@ -252,7 +249,7 @@
             this.txt_Nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nombre.ForeColor = System.Drawing.Color.Black;
             this.txt_Nombre.Location = new System.Drawing.Point(79, 124);
-            this.txt_Nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Nombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(360, 25);
             this.txt_Nombre.TabIndex = 28;
@@ -275,10 +272,10 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(246)))), ((int)(((byte)(244)))));
             this.panel3.Controls.Add(this.Btn_Salir);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.dgvUsuarios);
+            this.panel3.Controls.Add(this.dgvDoctores);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(749, 526);
             this.panel3.TabIndex = 3;
@@ -294,7 +291,7 @@
             this.Btn_Salir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_Salir.IconSize = 15;
             this.Btn_Salir.Location = new System.Drawing.Point(4, 4);
-            this.Btn_Salir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_Salir.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Salir.Name = "Btn_Salir";
             this.Btn_Salir.Size = new System.Drawing.Size(20, 18);
             this.Btn_Salir.TabIndex = 31;
@@ -315,52 +312,53 @@
             this.label7.TabIndex = 30;
             this.label7.Text = "Monitorear Doctores";
             // 
-            // dgvUsuarios
+            // dgvDoctores
             // 
-            this.dgvUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(246)))), ((int)(((byte)(244)))));
-            this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(126)))), ((int)(((byte)(143)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvUsuarios.ColumnHeadersHeight = 30;
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDoctores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(246)))), ((int)(((byte)(244)))));
+            this.dgvDoctores.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDoctores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(126)))), ((int)(((byte)(143)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDoctores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvDoctores.ColumnHeadersHeight = 30;
+            this.dgvDoctores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvDoctores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Nombre,
             this.Especialidad,
             this.Correo,
             this.Celular,
             this.Estado});
-            this.dgvUsuarios.EnableHeadersVisualStyles = false;
-            this.dgvUsuarios.GridColor = System.Drawing.Color.Gainsboro;
-            this.dgvUsuarios.Location = new System.Drawing.Point(16, 144);
-            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(126)))), ((int)(((byte)(133)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvUsuarios.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(126)))), ((int)(((byte)(133)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvUsuarios.Size = new System.Drawing.Size(715, 262);
-            this.dgvUsuarios.TabIndex = 3;
-            this.dgvUsuarios.TabStop = false;
+            this.dgvDoctores.EnableHeadersVisualStyles = false;
+            this.dgvDoctores.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgvDoctores.Location = new System.Drawing.Point(16, 144);
+            this.dgvDoctores.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDoctores.Name = "dgvDoctores";
+            this.dgvDoctores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(126)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDoctores.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvDoctores.RowHeadersWidth = 51;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(126)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvDoctores.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvDoctores.Size = new System.Drawing.Size(715, 262);
+            this.dgvDoctores.TabIndex = 3;
+            this.dgvDoctores.TabStop = false;
+            this.dgvDoctores.SelectionChanged += new System.EventHandler(this.dgvDoctores_SelectionChanged);
             // 
             // Id
             // 
@@ -410,7 +408,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MonitorearDoctores";
             this.Size = new System.Drawing.Size(1265, 526);
             this.panel2.ResumeLayout(false);
@@ -418,7 +416,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoctores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -426,7 +424,7 @@
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.DataGridView dgvDoctores;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Especialidad;
