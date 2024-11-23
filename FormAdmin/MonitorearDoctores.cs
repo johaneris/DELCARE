@@ -89,7 +89,7 @@ namespace UAM_INVESTIGATION.FormAdmin
             txt_Nombre.Clear();
             txt_Correo.Clear();
             txt_Celular.Clear();
-            cmb_Especilidad.SelectedIndex = 0;
+            cmb_Especilidad.SelectedIndex = -1;
         }
         private void CargarDoctores()
         {

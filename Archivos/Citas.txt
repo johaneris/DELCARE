@@ -1,2 +1,5 @@
 7967|Steven Mejia|1657|23/11/2024 8:00:00 - 23/11/2024 16:00:00 / Lunes|87872000|Reconstruccion maxilar|True|7849
 5533|Steven Mejia|1657|23/11/2024 8:00:00 - 23/11/2024 16:00:00 / Lunes|58588080|Resoluc|True|7849
+9256|Johaneris|1657|11/23/2024 10:00:00 AM - 11/23/2024 12:00:00 PM / Miércoles|838383838383838|operacion|True|4243
+3079|Steven Mejia|5089|11/23/2024 8:00:00 AM - 11/23/2024 4:00:00 PM / Jueves|654548158|Me duelen los dientes...|True|7849
+4885|Steven Mejia|5089|11/23/2024 8:00:00 AM - 11/23/2024 4:00:00 PM / Jueves|58320555|Me duelen los dienstes|True|7849

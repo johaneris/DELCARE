@@ -121,6 +121,13 @@ namespace UAM_INVESTIGATION.FormAdmin
         {
             try
             {
+                // Validación del doctor seleccionado
+                if (cmb_Doctores.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Por favor, seleccione un doctor.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 // Validación del ComboBox (día de la semana)
                 if (cmb_DiaSemana.SelectedIndex == -1)
                 {
@@ -128,55 +135,34 @@ namespace UAM_INVESTIGATION.FormAdmin
                     return;
                 }
 
-                // Validación del DateTimePicker de hora inicial y final
+                // Validación de las horas
                 DateTime horaInicial = dtpHoraInicio.Value;
                 DateTime horaFinal = dtpFinal.Value;
 
-                if (horaInicial.Hour < 8 || horaInicial.Hour > 20 || (horaInicial.Hour == 20 && horaInicial.Minute > 0))
+                if (!ValidarHoras(horaInicial, horaFinal))
                 {
-                    MessageBox.Show("La hora de inicio debe estar entre las 8:00 AM y las 8:00 PM.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                    return; // La función ValidarHoras muestra mensajes de error si las horas son inválidas.
                 }
 
-                if (horaFinal.Hour < 8 || horaFinal.Hour > 20 || (horaFinal.Hour == 20 && horaFinal.Minute > 0))
+                // Validación del rango de fechas (noviembre de 2024 a diciembre de 2025)
+                if (!ValidarFechas(horaInicial))
                 {
-                    MessageBox.Show("La hora de fin debe estar entre las 8:00 AM y las 8:00 PM.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                if (horaFinal <= horaInicial)
-                {
-                    MessageBox.Show("La hora de fin debe ser mayor que la hora de inicio.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                // Validación de las fechas (noviembre de 2024 a diciembre de 2025)
-                DateTime fechaActual = DateTime.Now;
-                if (horaInicial.Year < 2024 || (horaInicial.Year == 2024 && horaInicial.Month < 11))
-                {
-                    MessageBox.Show("La fecha debe ser a partir de noviembre de 2024.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                if (horaInicial.Year > 2025 || (horaInicial.Year == 2025 && horaInicial.Month > 12))
-                {
-                    MessageBox.Show("La fecha no puede exceder diciembre de 2025.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                    return; // La función ValidarFechas muestra mensajes de error si la fecha es inválida.
                 }
 
                 // Crear y guardar el horario
                 int idHorario = new Random().Next(1000, 9999); // Generar ID aleatorio
-                int idDoctor = ObtenerIdDoctor(cmb_Doctores.Text); // Método que recupera el ID del doctor actual
+                int idDoctor = ObtenerIdDoctor(cmb_Doctores.Text);
                 string diaSemana = cmb_DiaSemana.SelectedItem.ToString();
                 bool activo = true;
 
                 Horario nuevoHorario = new Horario(idHorario, idDoctor, horaInicial, horaFinal, diaSemana, activo);
-                var controlHorario = new ControlHorario();
                 controlHorario.GuardarHorarios(nuevoHorario);
 
                 // Confirmación
                 MessageBox.Show("Horario guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarHorarios();
+
                 // Limpiar campos
                 LimpiarCamposHorario();
             }
@@ -184,6 +170,46 @@ namespace UAM_INVESTIGATION.FormAdmin
             {
                 MessageBox.Show($"Error al guardar el horario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private bool ValidarHoras(DateTime horaInicial, DateTime horaFinal)
+        {
+            if (horaInicial < DateTime.Today.AddHours(8) || horaInicial > DateTime.Today.AddHours(20))
+            {
+                MessageBox.Show("La hora de inicio debe estar entre las 8:00 AM y las 8:00 PM.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (horaFinal <= horaInicial)
+            {
+                MessageBox.Show("La hora de fin debe ser mayor que la hora de inicio.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (horaFinal > DateTime.Today.AddHours(20))
+            {
+                MessageBox.Show("La hora de fin no puede exceder las 8:00 PM.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool ValidarFechas(DateTime fecha)
+        {
+            if (fecha.Year < 2024 || (fecha.Year == 2024 && fecha.Month < 11))
+            {
+                MessageBox.Show("La fecha debe ser a partir de noviembre de 2024.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (fecha.Year > 2025 || (fecha.Year == 2025 && fecha.Month > 12))
+            {
+                MessageBox.Show("La fecha no puede exceder diciembre de 2025.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
         }
 
         private void LimpiarCamposHorario()

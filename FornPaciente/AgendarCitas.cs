@@ -37,15 +37,21 @@ namespace UAM_INVESTIGATION.FormEstudiantes
             }
         }
 
-        private void CargarFechaHora()
+        private void CargarFechaHora(string nombreDoc)
         {
             ControlHorario controlHorario = new ControlHorario();
             var horarios = controlHorario.LeerHorarios();
 
             cmb_FechaHora.Items.Clear();
+            int idDoctor = ObtenerIdDoctor(nombreDoc);
+            Console.WriteLine(idDoctor);
             foreach (var horario in horarios)
             {
-                cmb_FechaHora.Items.Add($"{horario.HoraInicial} - {horario.HoraFinal} / {horario.DiaSemana}");
+                if (idDoctor == horario.DoctorID)
+                {
+                    cmb_FechaHora.Items.Add($"{horario.HoraInicial} - {horario.HoraFinal} / {horario.DiaSemana}");
+                }
+                    
             }
         }
 
@@ -55,7 +61,11 @@ namespace UAM_INVESTIGATION.FormEstudiantes
             var doctor = doctorService.LeerDoctores();
             foreach (var doc in  doctor)
             {
-                return doc.Id;
+                if(nombreDoctor == doc.Nombre)
+                {
+                    return doc.Id;
+                }
+                
             }
             return 0;
         }
@@ -69,7 +79,7 @@ namespace UAM_INVESTIGATION.FormEstudiantes
         private void Agendar_citas_Load(object sender, EventArgs e)
         {
             CargarDoctorCmb();
-            CargarFechaHora();
+            //CargarFechaHora(cmb_Doctores.Text);
         }
 
         private void btn_Agendar_Click(object sender, EventArgs e)
@@ -118,6 +128,12 @@ namespace UAM_INVESTIGATION.FormEstudiantes
             {
                 MessageBox.Show($"Error al agendar la cita: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+
+        private void cmb_Doctores_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarFechaHora(cmb_Doctores.Text);
         }
     }
 }

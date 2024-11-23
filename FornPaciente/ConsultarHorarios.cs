@@ -71,7 +71,7 @@ namespace UAM_INVESTIGATION.FornPaciente
                 => ObtenerNombreDoctor(h.DoctorID).Equals(nombreDoctor, StringComparison.OrdinalIgnoreCase));
 
             dgvHorarios.Rows.Clear();
-            foreach (var horario in horarios )
+            foreach (var horario in horariosFiltrados )
             {
                 string nombre = ObtenerNombreDoctor(horario.DoctorID);
                 dgvHorarios.Rows.Add(nombre, horario.HoraInicial, horario.HoraFinal, horario.DiaSemana);

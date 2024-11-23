@@ -102,7 +102,7 @@ namespace UAM_INVESTIGATION.FormAdmin
                 lbl_Id.Text = filaSeleccionada.Cells[0].Value != null ? filaSeleccionada.Cells[0].Value.ToString() : "N/A";
                 lbl_Nombre.Text = filaSeleccionada.Cells[1].Value != null ? filaSeleccionada.Cells[1].Value.ToString() : "N/A";
                 lbl_Correo.Text = filaSeleccionada.Cells[2].Value != null ? filaSeleccionada.Cells[2].Value.ToString() : "N/A";
-                lbl_Estado.Text = filaSeleccionada.Cells[3].Value != null ? filaSeleccionada.Cells[5].Value.ToString() : "N/A";
+                lbl_Estado.Text = filaSeleccionada.Cells[3].Value != null ? filaSeleccionada.Cells[3].Value.ToString() : "N/A";
             }
         }
 

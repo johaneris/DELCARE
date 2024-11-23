@@ -41,30 +41,35 @@ namespace UAM_INVESTIGATION.Helpers
 
         public List<Horario> LeerHorarios()
         {
-            var horario = new List<Horario>();
+            var horarios = new List<Horario>();
             try
             {
                 if (File.Exists(horarioFile))
                 {
                     foreach (var linea in File.ReadAllLines(horarioFile))
                     {
+                        if (string.IsNullOrWhiteSpace(linea)) continue;
+
                         var datos = linea.Split('|');
-                        int idHorario = int.Parse(datos[0]);
-                        int idDoctor = int.Parse(datos[1]);
-                        DateTime fechaInicio = DateTime.Parse(datos[2]);
-                        DateTime fechaFinal = DateTime.Parse(datos[3]);
-                        bool activo = bool.Parse(datos[5]);
-                        horario.Add(new Horario(idHorario, idDoctor, fechaInicio, fechaFinal, datos[4], activo));
+                        if (datos.Length != 6) continue; // Asegurar que hay 6 columnas
+
+                        if (int.TryParse(datos[0], out int idHorario) &&
+                            int.TryParse(datos[1], out int idDoctor) &&
+                            DateTime.TryParse(datos[2], out DateTime horaInicial) &&
+                            DateTime.TryParse(datos[3], out DateTime horaFinal) &&
+                            bool.TryParse(datos[5], out bool activo))
+                        {
+                            horarios.Add(new Horario(idHorario, idDoctor, horaInicial, horaFinal, datos[4], activo));
+                        }
                     }
                 }
-                
             }
             catch (IOException ex)
             {
-                throw new Exception($"Error al leer los doctores: {ex.Message}");
+                throw new Exception($"Error al leer los horarios: {ex.Message}");
             }
 
-            return horario;
+            return horarios;
         }
 
         public void DarDeBajaDoctor(int id)
