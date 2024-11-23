@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UAM_INVESTIGATION.Estructuras;
 using UAM_INVESTIGATION.Helpers;
 
 namespace UAM_INVESTIGATION.FormEstudiantes
@@ -43,6 +44,17 @@ namespace UAM_INVESTIGATION.FormEstudiantes
             }
         }
 
+        private int ObtenerIdDoctor(string nombreDoctor)
+        {
+            DoctorService doctorService = new DoctorService();
+            var doctor = doctorService.LeerDoctores();
+            foreach (var doc in  doctor)
+            {
+                return doc.Id;
+            }
+            return 0;
+        }
+
 
         private void Btn_Salir_Click(object sender, EventArgs e)
         {
@@ -53,6 +65,54 @@ namespace UAM_INVESTIGATION.FormEstudiantes
         {
             CargarDoctorCmb();
             CargarFechaHora();
+        }
+
+        private void btn_Agendar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string nombre = txt_Nombre.Text;
+                string doctor = cmb_Doctores.Text;
+                string fecha = cmb_FechaHora.Text;
+                string telefono = txt_Telefono.Text;
+                string descripcion = txt_Descripcion.Text;  
+                if (nombre == "")
+                {
+                    MessageBox.Show("Por favor, introduzca su nombre", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }else if(doctor == "")
+                {
+                    MessageBox.Show("Por favor, seleccione un doctor.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }else if(fecha == "")
+                {
+                    MessageBox.Show("Por favor, seleccione la fecha.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else if (telefono == "")
+                {
+                    MessageBox.Show("Por favor, introduzca su telefono.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else if (descripcion == "")
+                {
+                    MessageBox.Show("Por favor, escriba su motivo.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int idCita = new Random().Next(1000, 9999);
+                int idDoctor = ObtenerIdDoctor(doctor);
+                bool activo = true;
+
+                Citas nuevaCitas = new Citas(idCita, nombre, idDoctor, fecha, telefono, descripcion, activo);
+                var controlCitas = new ControlCitas();
+                controlCitas.GuardarCitar(nuevaCitas);
+                MessageBox.Show("Cita agendada con éxicto.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al agendar la cita: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

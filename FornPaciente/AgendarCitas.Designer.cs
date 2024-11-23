@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.panelMain = new System.Windows.Forms.Panel();
+            this.txt_Descripcion = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_Telefono = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.cmb_FechaHora = new System.Windows.Forms.ComboBox();
             this.cmb_Doctores = new System.Windows.Forms.ComboBox();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.Btn_Reportes = new FontAwesome.Sharp.IconButton();
+            this.btn_Agendar = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Btn_Salir = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_Telefono = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txt_Descripcion = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,13 +65,60 @@
             this.panelMain.Controls.Add(this.label3);
             this.panelMain.Controls.Add(this.label2);
             this.panelMain.Controls.Add(this.label5);
-            this.panelMain.Controls.Add(this.Btn_Reportes);
+            this.panelMain.Controls.Add(this.btn_Agendar);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(247, 60);
             this.panelMain.Margin = new System.Windows.Forms.Padding(2);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(603, 454);
             this.panelMain.TabIndex = 1;
+            // 
+            // txt_Descripcion
+            // 
+            this.txt_Descripcion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_Descripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Descripcion.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Descripcion.ForeColor = System.Drawing.Color.Black;
+            this.txt_Descripcion.Location = new System.Drawing.Point(167, 298);
+            this.txt_Descripcion.Multiline = true;
+            this.txt_Descripcion.Name = "txt_Descripcion";
+            this.txt_Descripcion.Size = new System.Drawing.Size(270, 78);
+            this.txt_Descripcion.TabIndex = 52;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(163, 275);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 20);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "Motivo";
+            // 
+            // txt_Telefono
+            // 
+            this.txt_Telefono.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Telefono.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Telefono.ForeColor = System.Drawing.Color.Black;
+            this.txt_Telefono.Location = new System.Drawing.Point(167, 231);
+            this.txt_Telefono.Name = "txt_Telefono";
+            this.txt_Telefono.Size = new System.Drawing.Size(270, 27);
+            this.txt_Telefono.TabIndex = 50;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(163, 208);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 20);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "Telefono";
             // 
             // cmb_FechaHora
             // 
@@ -140,27 +187,28 @@
             this.label5.TabIndex = 37;
             this.label5.Text = "Nombre";
             // 
-            // Btn_Reportes
+            // btn_Agendar
             // 
-            this.Btn_Reportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(126)))), ((int)(((byte)(133)))));
-            this.Btn_Reportes.FlatAppearance.BorderSize = 0;
-            this.Btn_Reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Reportes.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Reportes.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Btn_Reportes.IconChar = FontAwesome.Sharp.IconChar.CalendarCheck;
-            this.Btn_Reportes.IconColor = System.Drawing.Color.Gainsboro;
-            this.Btn_Reportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Btn_Reportes.IconSize = 30;
-            this.Btn_Reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Reportes.Location = new System.Drawing.Point(210, 382);
-            this.Btn_Reportes.Name = "Btn_Reportes";
-            this.Btn_Reportes.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Btn_Reportes.Size = new System.Drawing.Size(200, 55);
-            this.Btn_Reportes.TabIndex = 7;
-            this.Btn_Reportes.Text = "Agendar";
-            this.Btn_Reportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Reportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_Reportes.UseVisualStyleBackColor = false;
+            this.btn_Agendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(126)))), ((int)(((byte)(133)))));
+            this.btn_Agendar.FlatAppearance.BorderSize = 0;
+            this.btn_Agendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Agendar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Agendar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_Agendar.IconChar = FontAwesome.Sharp.IconChar.CalendarCheck;
+            this.btn_Agendar.IconColor = System.Drawing.Color.Gainsboro;
+            this.btn_Agendar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Agendar.IconSize = 30;
+            this.btn_Agendar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Agendar.Location = new System.Drawing.Point(201, 401);
+            this.btn_Agendar.Name = "btn_Agendar";
+            this.btn_Agendar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btn_Agendar.Size = new System.Drawing.Size(205, 36);
+            this.btn_Agendar.TabIndex = 7;
+            this.btn_Agendar.Text = "Agendar";
+            this.btn_Agendar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Agendar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Agendar.UseVisualStyleBackColor = false;
+            this.btn_Agendar.Click += new System.EventHandler(this.btn_Agendar_Click);
             // 
             // panel1
             // 
@@ -234,53 +282,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Agendar Cita";
             // 
-            // txt_Telefono
-            // 
-            this.txt_Telefono.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Telefono.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Telefono.ForeColor = System.Drawing.Color.Black;
-            this.txt_Telefono.Location = new System.Drawing.Point(167, 231);
-            this.txt_Telefono.Name = "txt_Telefono";
-            this.txt_Telefono.Size = new System.Drawing.Size(270, 27);
-            this.txt_Telefono.TabIndex = 50;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(163, 208);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 20);
-            this.label6.TabIndex = 49;
-            this.label6.Text = "Telefono";
-            // 
-            // txt_Descripcion
-            // 
-            this.txt_Descripcion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_Descripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Descripcion.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Descripcion.ForeColor = System.Drawing.Color.Black;
-            this.txt_Descripcion.Location = new System.Drawing.Point(167, 298);
-            this.txt_Descripcion.Multiline = true;
-            this.txt_Descripcion.Name = "txt_Descripcion";
-            this.txt_Descripcion.Size = new System.Drawing.Size(270, 78);
-            this.txt_Descripcion.TabIndex = 52;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(163, 275);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 20);
-            this.label7.TabIndex = 51;
-            this.label7.Text = "Motivo";
-            // 
             // Agendar_citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,7 +306,7 @@
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton Btn_Reportes;
+        private FontAwesome.Sharp.IconButton btn_Agendar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
