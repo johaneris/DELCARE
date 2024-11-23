@@ -27,11 +27,26 @@ namespace UAM_INVESTIGATION.FormAdmin
 
         private void InicializarFormulario()
         {
-            CargarDoctores();
+            CargarDoctoresComboBox();
+            //CargarDoctores();
             InicializarComboBoxDias();
             CargarHorarios();
         }
 
+        private void CargarDoctoresComboBox()
+        {
+            DoctorService doctorService = new DoctorService();
+            var doctores = doctorService.LeerDoctores();
+
+            cmb_Doctores.Items.Clear();
+
+            foreach (var doctor in doctores)
+            {
+                cmb_Doctores.Items.Add(doctor.Nombre);
+            }
+        }
+
+        /*
         private void CargarDoctores()
         {
             var doctores = doctorService.LeerDoctores();
@@ -39,14 +54,15 @@ namespace UAM_INVESTIGATION.FormAdmin
             cmb_Doctores.DisplayMember = "Nombre";
             cmb_Doctores.ValueMember = "Id";
         }
+        */
 
         private void InicializarComboBoxDias()
         {
-            cmbDiadeSemana.Items.AddRange(new string[]
+            cmb_DiaSemana.Items.AddRange(new string[]
             {
                 "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"
             });
-            cmbDiadeSemana.SelectedIndex = -1;
+            cmb_DiaSemana.SelectedIndex = -1;
         }
 
         private void ConfigurarDateTimePickers()
@@ -78,6 +94,21 @@ namespace UAM_INVESTIGATION.FormAdmin
                 MessageBox.Show($"Error al cargar los horarios: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private int ObtenerIdDoctor(string nombreDoctor)
+        {
+            DoctorService doctorService= new DoctorService();
+            var doctor = doctorService.LeerDoctores();
+
+            foreach (var doc in doctor)
+            {
+                if (doc.Nombre == nombreDoctor)
+                {
+                    return doc.Id;
+                }
+            }
+            return 0;
+        }
         private void Btn_Salir_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -88,7 +119,7 @@ namespace UAM_INVESTIGATION.FormAdmin
             try
             {
                 // Validación del ComboBox (día de la semana)
-                if (cmbDiadeSemana.SelectedIndex == -1)
+                if (cmb_DiaSemana.SelectedIndex == -1)
                 {
                     MessageBox.Show("Por favor, seleccione un día de la semana.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -132,8 +163,8 @@ namespace UAM_INVESTIGATION.FormAdmin
 
                 // Crear y guardar el horario
                 int idHorario = new Random().Next(1000, 9999); // Generar ID aleatorio
-                int idDoctor = ObtenerIdDoctorSeleccionado(); // Método que recupera el ID del doctor actual
-                string diaSemana = cmbDiaSemana.SelectedItem.ToString();
+                int idDoctor = ObtenerIdDoctor(cmb_Doctores.Text); // Método que recupera el ID del doctor actual
+                string diaSemana = cmb_DiaSemana.SelectedItem.ToString();
                 bool activo = true;
 
                 Horario nuevoHorario = new Horario(idHorario, idDoctor, horaInicial, horaFinal, diaSemana, activo);
@@ -142,7 +173,7 @@ namespace UAM_INVESTIGATION.FormAdmin
 
                 // Confirmación
                 MessageBox.Show("Horario guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                CargarHorarios();
                 // Limpiar campos
                 LimpiarCamposHorario();
             }
@@ -154,9 +185,15 @@ namespace UAM_INVESTIGATION.FormAdmin
 
         private void LimpiarCamposHorario()
         {
-            cmbDiadeSemana.SelectedIndex = -1; // Limpiar selección del ComboBox
+            cmb_Doctores.SelectedIndex = -1;
+            cmb_DiaSemana.SelectedIndex = -1; // Limpiar selección del ComboBox
             dtpHoraInicio.Value = DateTime.Today.AddHours(8); // Resetear al inicio del rango permitido
             dtpFinal.Value = DateTime.Today.AddHours(9);    // Resetear a un valor por defecto
+        }
+
+        private void btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCamposHorario();
         }
 
 
