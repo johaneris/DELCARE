@@ -30,7 +30,7 @@ namespace UAM_INVESTIGATION.Helpers
             {
                 using (StreamWriter sw = new StreamWriter(horarioFile, true))
                 {
-                    sw.WriteLine($"{horario.ID}|{horario.DoctorID}|{horario.HoraInicial}|{horario.HoraFinal}|{horario.DiaSemana}|{horario.Activo = true}");
+                    sw.WriteLine($"{horario.ID}|{horario.DoctorID}|{horario.HoraInicial}|{horario.HoraFinal}|{horario.DiaSemana}|{horario.Activo}");
                 }
             }
             catch (IOException ex)
@@ -42,20 +42,22 @@ namespace UAM_INVESTIGATION.Helpers
         public List<Horario> LeerHorarios()
         {
             var horario = new List<Horario>();
-            if (!File.Exists(horarioFile)) return horario;
-
             try
             {
-                foreach (var linea in File.ReadAllLines(horarioFile))
+                if (File.Exists(horarioFile))
                 {
-                    var datos = linea.Split('|');
-                    int idHorario = int.Parse(datos[0]);
-                    int idDoctor = int.Parse(datos[1]);
-                    DateTime fechaInicio = DateTime.Parse(datos[2]);
-                    DateTime fechaFinal = DateTime.Parse(datos[3]);
-                    bool activo = bool.Parse(datos[5]);
-                    horario.Add(new Horario(idHorario, idDoctor, fechaInicio, fechaFinal, datos[4], activo));
+                    foreach (var linea in File.ReadAllLines(horarioFile))
+                    {
+                        var datos = linea.Split('|');
+                        int idHorario = int.Parse(datos[0]);
+                        int idDoctor = int.Parse(datos[1]);
+                        DateTime fechaInicio = DateTime.Parse(datos[2]);
+                        DateTime fechaFinal = DateTime.Parse(datos[3]);
+                        bool activo = bool.Parse(datos[5]);
+                        horario.Add(new Horario(idHorario, idDoctor, fechaInicio, fechaFinal, datos[4], activo));
+                    }
                 }
+                
             }
             catch (IOException ex)
             {
