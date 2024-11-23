@@ -37,5 +37,29 @@ namespace UAM_INVESTIGATION.Helpers
             }
         }
 
+        public List<Citas> LeerCitas()
+        {
+            var citas = new List<Citas>();
+            if (!File.Exists(citasFile)) return citas;
+
+            try
+            {
+                foreach (var linea in File.ReadAllLines(citasFile))
+                {
+                    var datos = linea.Split('|');
+                    int idCitas = int.Parse(datos[0]);
+                    int idDoctor = int.Parse(datos[2]);
+                    bool activo = bool.Parse(datos[6]);
+                    citas.Add(new Citas(idCitas, datos[1], idDoctor, datos[3], datos[4], datos[5], activo));
+                }
+            }
+            catch (IOException ex)
+            {
+                throw new Exception($"Error al leer las citas: {ex.Message}");
+            }
+
+            return citas;
+        }
+
     }
 }
