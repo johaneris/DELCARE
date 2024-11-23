@@ -39,7 +39,7 @@ namespace UAM_INVESTIGATION.FormEstudiantes
             cmb_FechaHora.Items.Clear();
             foreach (var horario in horarios)
             {
-                cmb_FechaHora.Items.Add($"{horario.HoraInicial} - {horario.HoraFinal} | {horario.DiaSemana}");
+                cmb_FechaHora.Items.Add($"{horario.HoraInicial} - {horario.HoraFinal} / {horario.DiaSemana}");
             }
         }
 

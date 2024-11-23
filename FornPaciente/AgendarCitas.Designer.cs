@@ -42,6 +42,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_Telefono = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_Descripcion = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,6 +55,10 @@
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(246)))), ((int)(((byte)(244)))));
+            this.panelMain.Controls.Add(this.txt_Descripcion);
+            this.panelMain.Controls.Add(this.label7);
+            this.panelMain.Controls.Add(this.txt_Telefono);
+            this.panelMain.Controls.Add(this.label6);
             this.panelMain.Controls.Add(this.cmb_FechaHora);
             this.panelMain.Controls.Add(this.cmb_Doctores);
             this.panelMain.Controls.Add(this.txt_Nombre);
@@ -70,7 +78,7 @@
             this.cmb_FechaHora.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cmb_FechaHora.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_FechaHora.FormattingEnabled = true;
-            this.cmb_FechaHora.Location = new System.Drawing.Point(167, 227);
+            this.cmb_FechaHora.Location = new System.Drawing.Point(167, 173);
             this.cmb_FechaHora.Name = "cmb_FechaHora";
             this.cmb_FechaHora.Size = new System.Drawing.Size(270, 28);
             this.cmb_FechaHora.TabIndex = 48;
@@ -80,7 +88,7 @@
             this.cmb_Doctores.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cmb_Doctores.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Doctores.FormattingEnabled = true;
-            this.cmb_Doctores.Location = new System.Drawing.Point(167, 168);
+            this.cmb_Doctores.Location = new System.Drawing.Point(167, 114);
             this.cmb_Doctores.Name = "cmb_Doctores";
             this.cmb_Doctores.Size = new System.Drawing.Size(270, 28);
             this.cmb_Doctores.TabIndex = 47;
@@ -91,7 +99,7 @@
             this.txt_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Nombre.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nombre.ForeColor = System.Drawing.Color.Black;
-            this.txt_Nombre.Location = new System.Drawing.Point(167, 116);
+            this.txt_Nombre.Location = new System.Drawing.Point(167, 62);
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(270, 27);
             this.txt_Nombre.TabIndex = 40;
@@ -102,7 +110,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(163, 204);
+            this.label3.Location = new System.Drawing.Point(163, 150);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 20);
             this.label3.TabIndex = 39;
@@ -114,7 +122,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(163, 145);
+            this.label2.Location = new System.Drawing.Point(163, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 38;
@@ -126,7 +134,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(163, 93);
+            this.label5.Location = new System.Drawing.Point(163, 39);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 20);
             this.label5.TabIndex = 37;
@@ -144,7 +152,7 @@
             this.Btn_Reportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_Reportes.IconSize = 30;
             this.Btn_Reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Reportes.Location = new System.Drawing.Point(209, 285);
+            this.Btn_Reportes.Location = new System.Drawing.Point(210, 382);
             this.Btn_Reportes.Name = "Btn_Reportes";
             this.Btn_Reportes.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.Btn_Reportes.Size = new System.Drawing.Size(200, 55);
@@ -226,6 +234,53 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Agendar Cita";
             // 
+            // txt_Telefono
+            // 
+            this.txt_Telefono.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Telefono.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Telefono.ForeColor = System.Drawing.Color.Black;
+            this.txt_Telefono.Location = new System.Drawing.Point(167, 231);
+            this.txt_Telefono.Name = "txt_Telefono";
+            this.txt_Telefono.Size = new System.Drawing.Size(270, 27);
+            this.txt_Telefono.TabIndex = 50;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(163, 208);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 20);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "Telefono";
+            // 
+            // txt_Descripcion
+            // 
+            this.txt_Descripcion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_Descripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Descripcion.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Descripcion.ForeColor = System.Drawing.Color.Black;
+            this.txt_Descripcion.Location = new System.Drawing.Point(167, 298);
+            this.txt_Descripcion.Multiline = true;
+            this.txt_Descripcion.Name = "txt_Descripcion";
+            this.txt_Descripcion.Size = new System.Drawing.Size(270, 78);
+            this.txt_Descripcion.TabIndex = 52;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(163, 275);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 20);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "Motivo";
+            // 
             // Agendar_citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,6 +316,10 @@
         private System.Windows.Forms.TextBox txt_Nombre;
         private System.Windows.Forms.ComboBox cmb_FechaHora;
         private System.Windows.Forms.ComboBox cmb_Doctores;
+        private System.Windows.Forms.TextBox txt_Descripcion;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txt_Telefono;
+        private System.Windows.Forms.Label label6;
     }
 
         #endregion
