@@ -16,7 +16,8 @@ namespace UAM_INVESTIGATION.FormEstudiantes
     {
         private string nombreUsuario;
         private string correoUsuario;
-        private string cifUsuario;        public PrincipalEst(string nombreUsuario, string correoUsuario)
+        private string cifUsuario;        
+        public PrincipalEst(string nombreUsuario, string correoUsuario)
         {
             InitializeComponent();
             this.nombreUsuario = nombreUsuario;
