@@ -77,11 +77,20 @@ namespace UAM_INVESTIGATION.FormAdmin
 
         private void btnGestionarDoctores_Click(object sender, EventArgs e)
         {
-            Horarios horariodedoctor = new Horarios();
+           MonitorearDoctores users = new MonitorearDoctores();
             pnl_Contenido.Controls.Clear();
 
-            horariodedoctor.Dock = DockStyle.Fill;
-            pnl_Contenido.Controls.Add(horariodedoctor);
+            users.Dock = DockStyle.Fill;
+            pnl_Contenido.Controls.Add(users);
+        }
+
+        private void btnDisponibilidad_Click(object sender, EventArgs e)
+        {
+           GestionarHorarios horarios = new GestionarHorarios();
+            pnl_Contenido.Controls.Clear();
+
+            horarios.Dock = DockStyle.Fill;
+            pnl_Contenido.Controls.Add(horarios);
         }
     }
 }
