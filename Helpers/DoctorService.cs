@@ -12,10 +12,11 @@ namespace UAM_INVESTIGATION.Helpers
     public class DoctorService
     {
         private readonly string doctorFile;
+        private readonly string folderPath;
 
         public DoctorService()
         {
-            string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Archivos");
+            folderPath = Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName, "Archivos");
             if (!Directory.Exists(folderPath))
                 Directory.CreateDirectory(folderPath);
 

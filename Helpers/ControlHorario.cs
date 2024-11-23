@@ -12,11 +12,12 @@ namespace UAM_INVESTIGATION.Helpers
     internal class ControlHorario
     {
         private readonly string horarioFile;
+        private readonly string folderPath;
         private List<ControlHorario> horarios;
 
         public ControlHorario()
         {
-            string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Archivos");
+            folderPath = Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName, "Archivos");
             if (!Directory.Exists(folderPath))
                 Directory.CreateDirectory(folderPath);
 
