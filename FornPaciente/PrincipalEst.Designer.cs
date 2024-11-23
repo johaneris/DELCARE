@@ -169,6 +169,7 @@
             this.Btn_HistorialCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_HistorialCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_HistorialCitas.UseVisualStyleBackColor = true;
+            this.Btn_HistorialCitas.Click += new System.EventHandler(this.Btn_HistorialCitas_Click);
             // 
             // Btn_AgendarCitas
             // 
@@ -191,6 +192,7 @@
             this.Btn_AgendarCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_AgendarCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_AgendarCitas.UseVisualStyleBackColor = true;
+            this.Btn_AgendarCitas.Click += new System.EventHandler(this.Btn_AgendarCitas_Click);
             // 
             // Btn_Perfil
             // 

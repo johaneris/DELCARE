@@ -71,5 +71,23 @@ namespace UAM_INVESTIGATION.FormEstudiantes
             consultarHorarios.Dock = DockStyle.Fill;
             pnl_Content.Controls.Add(consultarHorarios);
         }
+
+        private void Btn_AgendarCitas_Click(object sender, EventArgs e)
+        {
+            Agendar_citas agendar_Citas = new Agendar_citas();
+            pnl_Content.Controls.Clear();
+
+            agendar_Citas.Dock = DockStyle.Fill;
+            pnl_Content.Controls.Add(agendar_Citas);
+        }
+
+        private void Btn_HistorialCitas_Click(object sender, EventArgs e)
+        {
+            ConsultarCitas consultarCitas = new ConsultarCitas();
+            pnl_Content.Controls.Clear();
+
+            consultarCitas.Dock = DockStyle.Fill;
+            pnl_Content.Controls.Add(consultarCitas);
+        }
     }
 }

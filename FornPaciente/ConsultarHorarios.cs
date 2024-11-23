@@ -27,7 +27,10 @@ namespace UAM_INVESTIGATION.FornPaciente
 
             foreach (var doctor in doctores)
             {
-                cmb_BuscarDoctor.Items.Add(doctor.Nombre);
+                if (doctor.Activo == true)
+                {
+                    cmb_BuscarDoctor.Items.Add(doctor.Nombre);
+                }
             }
         }
         private string ObtenerNombreDoctor(int id)

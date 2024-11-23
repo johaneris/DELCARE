@@ -22,6 +22,7 @@ namespace UAM_INVESTIGATION.FormAdmin
             doctorService = new DoctorService();
 
             InicializarComboBoxEspecialidades();
+            cmb_Especilidad.SelectedIndex = -1;
         }
 
         private void Btn_Salir_Click(object sender, EventArgs e)
@@ -169,6 +170,11 @@ namespace UAM_INVESTIGATION.FormAdmin
             {
                 MessageBox.Show("Por favor, seleccione un doctor.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void MonitorearDoctores_Load(object sender, EventArgs e)
+        {
+            CargarDoctores();
         }
     }
 }

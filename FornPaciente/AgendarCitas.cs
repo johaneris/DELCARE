@@ -28,7 +28,10 @@ namespace UAM_INVESTIGATION.FormEstudiantes
 
             foreach (var doctor in doctores)
             {
-                cmb_Doctores.Items.Add(doctor.Nombre);
+                if (doctor.Activo == true)
+                {
+                    cmb_Doctores.Items.Add(doctor.Nombre);
+                }
             }
         }
 
