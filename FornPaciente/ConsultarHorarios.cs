@@ -46,11 +46,45 @@ namespace UAM_INVESTIGATION.FornPaciente
             }
         }
 
-        private void FiltrarPorDoctor(string Doctor)
+        private void FiltrarPorDoctor(string nombreDoctor)
         {
             ControlHorario controlHorario = new ControlHorario();
             var horarios = controlHorario.LeerHorarios();
-            
+
+            var horariosFiltrados = horarios.Where(h 
+                => ObtenerNombreDoctor(h.DoctorID).Equals(nombreDoctor, StringComparison.OrdinalIgnoreCase));
+
+            dgvHorarios.Rows.Clear();
+            foreach (var horario in horarios )
+            {
+                string nombre = ObtenerNombreDoctor(horario.DoctorID);
+                dgvHorarios.Rows.Add(nombre, horario.HoraInicial, horario.HoraFinal, horario.DiaSemana);
+            }
+        }
+
+        private void ConsultarHorarios_Load(object sender, EventArgs e)
+        {
+            CargarHorarios();
+        }
+
+        private void btn_Deshacer_Click(object sender, EventArgs e)
+        {
+            cmb_BuscarDoctor.SelectedIndex = -1;
+            CargarHorarios();
+        }
+
+        private void btn_Buscar_Click(object sender, EventArgs e)
+        {
+            string nombre = cmb_BuscarDoctor.Text;
+
+            if(!string.IsNullOrEmpty(nombre))
+            {
+                FiltrarPorDoctor(nombre);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un doctor para buscar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
