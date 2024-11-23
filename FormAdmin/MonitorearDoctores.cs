@@ -118,21 +118,29 @@ namespace UAM_INVESTIGATION.FormAdmin
 
 
                 // Obtener el valor del nombre y establecerlo en el TextBox correspondiente
-                txt_Nombre.Text = filaSeleccionada.Cells[1].Value?.ToString();
+                txt_Nombre.Text = filaSeleccionada.Cells[1].Value != null ? filaSeleccionada.Cells[1].Value.ToString() : "N/A";
 
                 // Establecer el valor en el ComboBox de especialidad
-                string especialidad = filaSeleccionada.Cells[2].Value?.ToString();
-                if (!string.IsNullOrEmpty(especialidad))
-                {
-                    cmb_Especilidad.SelectedItem = especialidad; // Seleccionar si está en la lista
-                }
-                else
-                {
-                    cmb_Especilidad.SelectedIndex = -1; // Limpiar selección si no hay valor
-                }
+                cmb_Especilidad.Text = filaSeleccionada.Cells[1].Value != null ? filaSeleccionada.Cells[2].Value.ToString() : "N/A";
+                txt_Correo.Text = filaSeleccionada.Cells[1].Value != null ? filaSeleccionada.Cells[3].Value.ToString() : "N/A";
+                txt_Celular.Text = filaSeleccionada.Cells[1].Value != null ? filaSeleccionada.Cells[4].Value.ToString() : "N/A";
             }
         }
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            txt_Nombre.Clear();
+            cmb_Especilidad.SelectedIndex = -1;
+            txt_Correo.Clear();
+            txt_Celular.Clear();
+            dgvDoctores.ClearSelection();
+        }
+
+        private void btn_DarBaja1_Click(object sender, EventArgs e)
         {
             if (dgvDoctores.SelectedRows.Count > 0)
             {
@@ -161,11 +169,6 @@ namespace UAM_INVESTIGATION.FormAdmin
             {
                 MessageBox.Show("Por favor, seleccione un doctor.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        private void btn_Cancelar_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
