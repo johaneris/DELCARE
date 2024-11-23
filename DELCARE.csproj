@@ -113,6 +113,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Estructuras\strCitas.cs" />
     <Compile Include="Estructuras\strHorarioDoctor.cs" />
     <Compile Include="Estructuras\StrUsuarioAdmin.cs" />
     <Compile Include="Estructuras\StrUsuarioEst.cs" />
@@ -218,6 +219,7 @@
     <Compile Include="FormsInicios\RegistroUserEst.Designer.cs">
       <DependentUpon>RegistroUserEst.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ControlCitas.cs" />
     <Compile Include="Helpers\ControlHorario.cs" />
     <Compile Include="Helpers\DoctorService.cs" />
     <Compile Include="Helpers\InitRegis.cs" />

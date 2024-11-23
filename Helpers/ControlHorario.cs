@@ -13,7 +13,7 @@ namespace UAM_INVESTIGATION.Helpers
     {
         private readonly string horarioFile;
         private readonly string folderPath;
-        private List<ControlHorario> horarios;
+
 
         public ControlHorario()
         {
