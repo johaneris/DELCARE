@@ -17,6 +17,19 @@ namespace UAM_INVESTIGATION.FornPaciente
         {
             InitializeComponent();
         }
+
+        private void CargarDoctores()
+        {
+            DoctorService doctorService = new DoctorService();
+            var doctores = doctorService.LeerDoctores();
+
+            cmb_BuscarDoctor.Items.Clear();
+
+            foreach (var doctor in doctores)
+            {
+                cmb_BuscarDoctor.Items.Add(doctor.Nombre);
+            }
+        }
         private string ObtenerNombreDoctor(int id)
         {
             DoctorService doctorService = new DoctorService();
