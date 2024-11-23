@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UAM_INVESTIGATION.Estructuras;
 using UAM_INVESTIGATION.FormAdmin;
 using UAM_INVESTIGATION.FornPaciente;
 
@@ -16,12 +17,13 @@ namespace UAM_INVESTIGATION.FormEstudiantes
     {
         private string nombreUsuario;
         private string correoUsuario;
-        private string cifUsuario;        
-        public PrincipalEst(string nombreUsuario, string correoUsuario)
+        private int idPaciente;        
+        public PrincipalEst(string nombreUsuario, string correoUsuario, int id)
         {
             InitializeComponent();
             this.nombreUsuario = nombreUsuario;
             this.correoUsuario = correoUsuario;
+            this.idPaciente = id;
 
         }
 
@@ -74,7 +76,7 @@ namespace UAM_INVESTIGATION.FormEstudiantes
 
         private void Btn_AgendarCitas_Click(object sender, EventArgs e)
         {
-            Agendar_citas agendar_Citas = new Agendar_citas();
+            Agendar_citas agendar_Citas = new Agendar_citas(idPaciente);
             pnl_Content.Controls.Clear();
 
             agendar_Citas.Dock = DockStyle.Fill;
@@ -83,7 +85,7 @@ namespace UAM_INVESTIGATION.FormEstudiantes
 
         private void Btn_HistorialCitas_Click(object sender, EventArgs e)
         {
-            ConsultarCitas consultarCitas = new ConsultarCitas();
+            ConsultarCitas consultarCitas = new ConsultarCitas(idPaciente);
             pnl_Content.Controls.Clear();
 
             consultarCitas.Dock = DockStyle.Fill;

@@ -14,9 +14,12 @@ namespace UAM_INVESTIGATION.FornPaciente
 {
     public partial class ConsultarCitas : UserControl
     {
-        public ConsultarCitas()
+        private int Id;
+        public ConsultarCitas(int id)
         {
             InitializeComponent();
+            CargarCitas(Id);
+            this.Id = id;
         }
         private string ObtenerNombreDoctor(int id)
         {
@@ -33,21 +36,22 @@ namespace UAM_INVESTIGATION.FornPaciente
             return "";
         }
 
-        private void CargarCitas()
+        private void CargarCitas(int id)
         {
+
             ControlCitas controlCitas = new ControlCitas();
-            var citas = controlCitas.LeerCitas();
-            dgv_Citas.Rows.Clear();
+            var citas = controlCitas.LeerCitas().Where(a => a.IdPaciente == id);
+            dgv_CitasConsulta.Rows.Clear();
             foreach (var cita in citas)
             {
                 string Nombre = ObtenerNombreDoctor(cita.IdDoctor);
-                dgv_Citas.Rows.Add(cita.NombrePaciente, Nombre, cita.FechaHora);
+                dgv_CitasConsulta.Rows.Add(cita.NombrePaciente, Nombre, cita.FechaHora);
             }
         }
 
         private void ConsultarCitas_Load(object sender, EventArgs e)
         {
-            CargarCitas();
+            CargarCitas(Id);
         }
     }
 }

@@ -122,7 +122,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 34);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 477);
+            this.panel2.Size = new System.Drawing.Size(200, 527);
             this.panel2.TabIndex = 2;
             // 
             // Btno_Horarios
@@ -229,7 +229,7 @@
             this.Btn_LogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_LogOut.IconSize = 30;
             this.Btn_LogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_LogOut.Location = new System.Drawing.Point(0, 441);
+            this.Btn_LogOut.Location = new System.Drawing.Point(0, 491);
             this.Btn_LogOut.Name = "Btn_LogOut";
             this.Btn_LogOut.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.Btn_LogOut.Size = new System.Drawing.Size(200, 36);
@@ -322,7 +322,7 @@
             this.pnl_Content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Content.Location = new System.Drawing.Point(200, 34);
             this.pnl_Content.Name = "pnl_Content";
-            this.pnl_Content.Size = new System.Drawing.Size(890, 477);
+            this.pnl_Content.Size = new System.Drawing.Size(890, 527);
             this.pnl_Content.TabIndex = 3;
             // 
             // PrincipalEst
@@ -330,7 +330,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(1090, 511);
+            this.ClientSize = new System.Drawing.Size(1090, 561);
             this.Controls.Add(this.pnl_Content);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

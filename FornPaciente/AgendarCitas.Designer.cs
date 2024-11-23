@@ -123,11 +123,11 @@
             // cmb_FechaHora
             // 
             this.cmb_FechaHora.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmb_FechaHora.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_FechaHora.Font = new System.Drawing.Font("Century", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_FechaHora.FormattingEnabled = true;
             this.cmb_FechaHora.Location = new System.Drawing.Point(167, 173);
             this.cmb_FechaHora.Name = "cmb_FechaHora";
-            this.cmb_FechaHora.Size = new System.Drawing.Size(270, 28);
+            this.cmb_FechaHora.Size = new System.Drawing.Size(270, 23);
             this.cmb_FechaHora.TabIndex = 48;
             // 
             // cmb_Doctores

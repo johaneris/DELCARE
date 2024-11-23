@@ -28,7 +28,7 @@ namespace UAM_INVESTIGATION.Helpers
             {
                 using (StreamWriter sw = new StreamWriter(citasFile, true))
                 {
-                    sw.WriteLine($"{citas.Id}|{citas.NombrePaciente}|{citas.IdDoctor}|{citas.FechaHora}|{citas.NumPaciente}||{citas.Descripcion}{citas.Activo = true}");
+                    sw.WriteLine($"{citas.Id}|{citas.NombrePaciente}|{citas.IdDoctor}|{citas.FechaHora}|{citas.NumPaciente}|{citas.Descripcion}|{citas.Activo}|{citas.IdPaciente}");
                 }
             }
             catch (IOException ex)
@@ -40,18 +40,23 @@ namespace UAM_INVESTIGATION.Helpers
         public List<Citas> LeerCitas()
         {
             var citas = new List<Citas>();
-            if (!File.Exists(citasFile)) return citas;
+            
 
             try
             {
-                foreach (var linea in File.ReadAllLines(citasFile))
+                if (File.Exists(citasFile))
                 {
-                    var datos = linea.Split('|');
-                    int idCitas = int.Parse(datos[0]);
-                    int idDoctor = int.Parse(datos[2]);
-                    bool activo = bool.Parse(datos[6]);
-                    citas.Add(new Citas(idCitas, datos[1], idDoctor, datos[3], datos[4], datos[5], activo));
+                    foreach (var linea in File.ReadAllLines(citasFile))
+                    {
+                        var datos = linea.Split('|');
+                        int idCitas = int.Parse(datos[0]);
+                        int idDoctor = int.Parse(datos[2]);
+                        int idPaciente = int.Parse(datos[7]);
+                        bool activo = bool.Parse(datos[6]);
+                        citas.Add(new Citas(idCitas, datos[1], idDoctor, datos[3], datos[4], datos[5], activo, idPaciente));
+                    }
                 }
+                    
             }
             catch (IOException ex)
             {
@@ -60,6 +65,7 @@ namespace UAM_INVESTIGATION.Helpers
 
             return citas;
         }
+
 
     }
 }

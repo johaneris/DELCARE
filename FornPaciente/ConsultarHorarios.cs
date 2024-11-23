@@ -103,5 +103,10 @@ namespace UAM_INVESTIGATION.FornPaciente
                 MessageBox.Show("Por favor, seleccione un doctor para buscar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void Btn_Salir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

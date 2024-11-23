@@ -47,6 +47,20 @@ namespace UAM_INVESTIGATION.Forms
             return "";
         }
 
+        private int ObtenerId(string entrada)
+        {
+            InitRegis initRegis = new InitRegis();
+            var estudiantes = initRegis.LeerUsuariosEst();
+            foreach (var est in estudiantes)
+            {
+                if (est.Correo == entrada)
+                {
+                    return est.Id;
+                }
+            }
+            return 0;
+        }
+
         private void msgError(string message)
         {
             lblErrorMessage.Text = message;
@@ -96,9 +110,10 @@ namespace UAM_INVESTIGATION.Forms
 
                     if (inicioValido)
                     {
-                        string nombreUsuario = ObtenerNombreUsuarioEst(correo ?? cif);
+                        string nombreUsuario = ObtenerNombreUsuarioEst(correo);
 
-                        string correoUsuario = ObtenerCorreo(correo ?? cif);
+                        string correoUsuario = ObtenerCorreo(correo);
+                        int id = ObtenerId(correo);
 
                         //Redirigir a la pantalla principal de Estudiantes
                         this.Hide();
@@ -107,7 +122,7 @@ namespace UAM_INVESTIGATION.Forms
 
                         if (type == 1)
                         {
-                            PrincipalEst principalEst = new PrincipalEst(nombreUsuario, correo);
+                            PrincipalEst principalEst = new PrincipalEst(nombreUsuario, correo, id);
                             principalEst.Show();
                         }
 

@@ -16,8 +16,9 @@ namespace UAM_INVESTIGATION.Estructuras
         public string NumPaciente { get; set; }
         public string Descripcion { get; set; }
         public bool Activo { get; set; }
+        public int IdPaciente { get; set; }
 
-        public Citas(int id, string nombrePaciente, int idDoctor, string fechaHora, string numPaciente,  string descripcion, bool activo)
+        public Citas(int id, string nombrePaciente, int idDoctor, string fechaHora, string numPaciente,  string descripcion, bool activo, int idPaciente)
         {
             Id = id;
             NombrePaciente = nombrePaciente;
@@ -26,6 +27,7 @@ namespace UAM_INVESTIGATION.Estructuras
             NumPaciente = numPaciente;
             Descripcion = descripcion;
             Activo = activo;
+            IdPaciente = idPaciente;
         }
 
     }

@@ -14,9 +14,11 @@ namespace UAM_INVESTIGATION.FormEstudiantes
 {
     public partial class Agendar_citas : UserControl
     {
-        public Agendar_citas()
+        private int Id;
+        public Agendar_citas(int idPaciente)
         {
             InitializeComponent();
+            this.Id = idPaciente;
         }
 
         private void CargarDoctorCmb()
@@ -106,8 +108,8 @@ namespace UAM_INVESTIGATION.FormEstudiantes
                 int idCita = new Random().Next(1000, 9999);
                 int idDoctor = ObtenerIdDoctor(doctor);
                 bool activo = true;
-
-                Citas nuevaCitas = new Citas(idCita, nombre, idDoctor, fecha, telefono, descripcion, activo);
+                int id = Id;
+                Citas nuevaCitas = new Citas(idCita, nombre, idDoctor, fecha, telefono, descripcion, activo, id);
                 var controlCitas = new ControlCitas();
                 controlCitas.GuardarCitar(nuevaCitas);
                 MessageBox.Show("Cita agendada con éxicto.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
